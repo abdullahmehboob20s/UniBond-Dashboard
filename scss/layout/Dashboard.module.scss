@@ -4,17 +4,13 @@
 .main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: u.rem(66) u.rem(40);
-  //   border: 2px solid red;
+  gap: 3.5vw 2.1vw;
   grid-template-rows: auto 1fr auto;
   height: 100%;
 
-  padding: 2rem u.rem(50);
-  padding-left: u.rem(140);
-
   .cards {
     display: grid;
-    gap: u.rem(28) 0;
+    gap: 1.6vw 0;
   }
 
   .tweets {
@@ -37,7 +33,7 @@
     background: #ffffff;
     box-shadow: 0px 11px 68px -3px rgba(0, 0, 0, 0.25);
     border-radius: u.rem(20);
-    padding: u.rem(28);
+    padding: 1.5vw;
     display: flex;
     flex-direction: column;
 
@@ -65,21 +61,33 @@
     }
   }
 
+  .onGoingTitle {
+    margin-bottom: 1.2vw;
+  }
+
   .footer {
-    padding: u.rem(18) u.rem(32);
+    padding: 1vw 1.6vw;
     background: #ffffff;
-    box-shadow: 0px 11px 68px rgba(0, 0, 0, 0.25);
+    box-shadow: u.rem(0) u.rem(11) u.rem(68) rgba(0, 0, 0, 0.25);
     border-radius: u.rem(20);
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 1fr 0.5fr auto;
+
+    .reportIcon {
+      width: 3.4vw;
+    }
+
+    .reportTickIcon {
+      width: 3.6vw;
+    }
 
     .box1 {
       display: flex;
       align-items: center;
 
       & > :not(:last-child) {
-        margin-right: u.rem(50);
+        margin-right: 2vw;
       }
 
       .reportTitles {

@@ -6,17 +6,17 @@ import { IoCaretDownCircleSharp } from "react-icons/io5";
 function Navbar() {
   return (
     <div className={styles.navbar}>
-      <img src="images/white-egg.png" alt="" />
+      <img src="images/white-egg.png" className={styles.logo} alt="" />
       <div>
-        <div className={`${styles.LogoTitle} mb-10px`}>
+        <div className={`${styles.LogoTitle}`}>
           <h1 className="fs-30px black weight-8">UniBond</h1>
           <button className="pointer">
-            <IoMdRefresh size={26} className="gray" />
+            <IoMdRefresh className={`${styles.refreshIcon} gray`} />
           </button>
         </div>
         <div className={styles.pageName}>
           <h2 className="gray fs-18px weight-6">Dashboard</h2>
-          <IoCaretDownCircleSharp size={20} className="gray" />
+          <IoCaretDownCircleSharp className={`${styles.downIcon} gray`} />
         </div>
       </div>
     </div>

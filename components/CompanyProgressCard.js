@@ -5,6 +5,7 @@ function CompanyProgressCard({
   title,
   subtitle,
   bg = "white",
+  iconWidth,
   icon,
   inWeek,
   textCenter = false,
@@ -12,7 +13,7 @@ function CompanyProgressCard({
 }) {
   return (
     <div
-      className={`${styles.card} ${textCenter ? styles.textCenter : ""}`}
+      className={`${styles.card}  ${textCenter ? styles.textCenter : ""}`}
       style={{ backgroundColor: bg }}
     >
       <h2 className="fs-18px black weight-6 lh-1_4">{title}</h2>
@@ -20,7 +21,14 @@ function CompanyProgressCard({
         <h1 className={`black weight-8 lh-1 ${subtitleFontSize}`}>
           {subtitle}
         </h1>
-        {icon ? <img src={icon} alt="" /> : null}
+        {icon ? (
+          <img
+            src={icon}
+            style={{ width: iconWidth }}
+            className={styles.icon}
+            alt=""
+          />
+        ) : null}
       </div>
       <p className="gray fs-12px weight-6">{inWeek} New This Week</p>
     </div>

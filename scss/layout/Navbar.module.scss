@@ -5,22 +5,30 @@
   display: flex;
   align-items: center;
   padding: u.rem(22) u.rem(20);
+  padding: 0.8vw 1vw;
 
   & > :not(:last-child) {
-    margin-right: u.rem(56);
+    margin-right: 3vw;
   }
+}
+
+.logo {
+  width: 3.8vw;
 }
 
 .LogoTitle {
   display: flex;
   align-items: center;
+  margin-bottom: 0.7vw;
 
   & > :not(:last-child) {
     margin-right: u.rem(18);
   }
 
-  button {
+  .refreshIcon {
     transform: rotate(40deg);
+    width: 1.5vw;
+    height: 1.5vw;
   }
 
   h1 {
@@ -36,6 +44,11 @@
       background-color: colors.$yellow;
     }
   }
+}
+
+.downIcon {
+  width: 1.2vw;
+  height: 1.2vw;
 }
 
 .pageName {

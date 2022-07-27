@@ -1,13 +1,22 @@
 @use "../utils/" as u;
 
+.container {
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+.container2 {
+  padding-left: 1.8vw;
+  padding-right: 1.8vw;
+}
+
 .sidebar {
   height: 100%;
   background: #f6f5f9;
-  padding: u.rem(46) 0;
+  padding: 2.6vw 0;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: u.rem(50);
+  gap: 2.8vw;
 
   .userHeader {
     display: flex;
@@ -34,8 +43,8 @@
       bottom: 0%;
       z-index: 100;
       left: 0;
-      width: 90%;
-      height: u.rem(70);
+      width: 85%;
+      height: 4vw;
       background: linear-gradient(
         180deg,
         rgba(246, 245, 249, 0) 0%,
@@ -49,15 +58,15 @@
     .usersCards {
       position: relative;
       height: auto;
-      margin-top: u.rem(28);
+      margin-top: 1.6vw;
       padding-top: 1.6%;
-      padding-bottom: u.rem(70);
-      padding-left: u.rem(46);
-      margin-right: u.rem(20);
+      padding-bottom: 3vw;
+      padding-left: 2.5vw;
+      margin-right: 1.8vw;
       overflow-y: scroll;
 
       &::-webkit-scrollbar {
-        width: u.rem(10);
+        width: 0.6vw;
       }
 
       &::-webkit-scrollbar-track {
@@ -81,7 +90,7 @@
       //   }
 
       & > :not(:last-child) {
-        margin-bottom: u.rem(20);
+        margin-bottom: 1.16vw;
       }
     }
   }
@@ -90,23 +99,15 @@
     background: #ffffff;
     box-shadow: u.rem(0) u.rem(11) u.rem(68) u.rem(-3) rgba(0, 0, 0, 0.25);
     border-radius: u.rem(20);
-    height: u.rem(240);
+    height: 12vw;
     position: relative;
 
     .commentIcon {
       position: absolute;
-      bottom: u.rem(-20);
-      right: u.rem(-20);
+      bottom: -1vw;
+      right: -1vw;
+      width: 4vw;
       cursor: pointer;
     }
   }
-}
-
-.container {
-  padding-left: u.rem(46);
-  padding-right: u.rem(46);
-}
-.container2 {
-  padding-left: u.rem(26);
-  padding-right: u.rem(26);
 }

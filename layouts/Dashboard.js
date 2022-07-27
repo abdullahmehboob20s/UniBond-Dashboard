@@ -10,18 +10,21 @@ function Dashboard() {
         subtitle="12"
         inWeek="25"
         icon="images/icons/development-icon.png"
+        iconWidth="4.4vw"
       />
       <CompanyProgressCard
         title="Total Audit Ongoing"
         subtitle="05"
         inWeek="8"
         icon="images/icons/total-audit-icon.png"
+        iconWidth="4.4vw"
       />
       <CompanyProgressCard
         title="Total Marketing Ongoing"
         subtitle="13"
         inWeek="15"
         icon="images/icons/total-marketing-icon.png"
+        iconWidth="2.8vw"
       />
       <CompanyProgressCard
         title="Total Revenue from projects"
@@ -49,7 +52,7 @@ function Dashboard() {
         />
       </div>
       <div className={styles.ongoingProjectCode}>
-        <h1 className="fs-22px weight-7 mb-25px black">
+        <h1 className={`fs-22px weight-7 black ${styles.onGoingTitle}`}>
           Ongoing Project open code.
         </h1>
         <div className={styles.projectCode}>
@@ -59,7 +62,11 @@ function Dashboard() {
 
       <div className={styles.footer}>
         <div className={styles.box1}>
-          <img src="images/blockaudit-report.svg" alt="" />
+          <img
+            src="images/blockaudit-report.svg"
+            className={styles.reportIcon}
+            alt=""
+          />
           <div className={styles.reportTitles}>
             <div>
               <h4 className="fs-20px weight-6 black mb-5px">
@@ -71,7 +78,11 @@ function Dashboard() {
                 www.blockaudit.report
               </h2>
             </div>
-            <img src="images/icons/grayYellowTick.svg" alt="" />
+            <img
+              src="images/icons/grayYellowTick.svg"
+              className={styles.reportTickIcon}
+              alt=""
+            />
           </div>
         </div>
 

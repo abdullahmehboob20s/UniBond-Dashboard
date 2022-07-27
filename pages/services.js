@@ -1,11 +1,11 @@
 import DashboardLayout from "layouts/DashboardLayout";
-import Dashboard from "layouts/Dashboard";
+import Services from "layouts/Services";
 
-export default function Home() {
+export default function ServicesPage() {
   return (
     <div>
       <DashboardLayout>
-        <Dashboard />
+        <Services />
       </DashboardLayout>
     </div>
   );

@@ -3,10 +3,13 @@
 
 .button {
   width: u.rem(51);
-  height: u.rem(52);
+  height: u.rem(51);
+  width: 2.7vw;
+  height: 2.7vw;
+
   background: #ffffff;
   box-shadow: u.rem(0) u.rem(8) u.rem(23) rgba(0, 0, 0, 0.21);
-  border-radius: u.rem(11);
+  border-radius: 0.7vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +18,9 @@
   position: relative;
 
   & > img {
-    border-radius: u.rem(11);
+    border-radius: 0.7vw;
+    width: 100%;
+    height: 100%;
   }
 
   .iconWrap {
@@ -32,19 +37,23 @@
 
   .notficationCircle {
     position: absolute;
-    top: u.rem(-2);
-    right: u.rem(-2);
-    width: u.rem(13);
-    height: u.rem(13);
+
+    top: -0.1vw;
+    right: -0.1vw;
+
+    width: 0.7vw;
+    height: 0.7vw;
+
     background: colors.$yellow;
     border-radius: 50%;
     z-index: 10;
   }
 
   & > .notficationCircle {
-    top: u.rem(-5);
-    right: u.rem(-5);
-    width: u.rem(17);
-    height: u.rem(17);
+    top: -0.3vw;
+    right: -0.3vw;
+
+    width: 0.9vw;
+    height: 0.9vw;
   }
 }
