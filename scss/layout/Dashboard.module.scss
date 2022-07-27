@@ -1,0 +1,117 @@
+@use "../utils" as u;
+@use "../globals/colors" as colors;
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: u.rem(66) u.rem(40);
+  //   border: 2px solid red;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+
+  padding: 2rem u.rem(50);
+  padding-left: u.rem(140);
+
+  .cards {
+    display: grid;
+    gap: u.rem(28) 0;
+  }
+
+  .tweets {
+    width: 100%;
+    min-height: fit-content;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .ongoingProjectCode {
+    grid-column: 3/-1;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0px 11px 68px -3px rgba(0, 0, 0, 0.25);
+    border-radius: u.rem(20);
+    padding: u.rem(28);
+    display: flex;
+    flex-direction: column;
+
+    & > h1 {
+      padding-left: 1rem;
+    }
+  }
+
+  .projectCode {
+    width: 100%;
+    flex: 1;
+    border-radius: u.rem(25);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .footer {
+    padding: u.rem(18) u.rem(32);
+    background: #ffffff;
+    box-shadow: 0px 11px 68px rgba(0, 0, 0, 0.25);
+    border-radius: u.rem(20);
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr auto;
+
+    .box1 {
+      display: flex;
+      align-items: center;
+
+      & > :not(:last-child) {
+        margin-right: u.rem(50);
+      }
+
+      .reportTitles {
+        display: flex;
+        align-items: center;
+
+        & > :not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        .reportLink {
+          position: relative;
+          z-index: 1;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 80%;
+            width: 100%;
+            height: u.rem(3);
+            background: colors.$yellow;
+            border-radius: u.rem(17);
+            z-index: -10;
+          }
+        }
+      }
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

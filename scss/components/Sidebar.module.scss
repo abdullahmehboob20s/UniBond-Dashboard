@@ -1,0 +1,112 @@
+@use "../utils/" as u;
+
+.sidebar {
+  height: 100%;
+  background: #f6f5f9;
+  padding: u.rem(46) 0;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: u.rem(50);
+
+  .userHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #d9d9d9;
+    padding: u.rem(4) 0;
+
+    button {
+      display: flex;
+      cursor: pointer;
+    }
+  }
+
+  .usersCardsWrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    min-height: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0%;
+      z-index: 100;
+      left: 0;
+      width: 90%;
+      height: u.rem(70);
+      background: linear-gradient(
+        180deg,
+        rgba(246, 245, 249, 0) 0%,
+        #f6f5f9 48.23%
+      );
+      //   border: 2px solid red;
+      //   display: none;
+      //   border: 2px solid red;
+    }
+
+    .usersCards {
+      position: relative;
+      height: auto;
+      margin-top: u.rem(28);
+      padding-top: 1.6%;
+      padding-bottom: u.rem(70);
+      padding-left: u.rem(46);
+      margin-right: u.rem(20);
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: u.rem(10);
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 27px;
+        background-color: #d9d9d9;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 27px;
+        background-color: #5c5c5c;
+      }
+
+      //   &:hover {
+      //     &::-webkit-scrollbar-track {
+      //       background-color: #d9d9d9;
+      //     }
+
+      //     &::-webkit-scrollbar-thumb {
+      //       background-color: #5c5c5c;
+      //     }
+      //   }
+
+      & > :not(:last-child) {
+        margin-bottom: u.rem(20);
+      }
+    }
+  }
+
+  .messageBox {
+    background: #ffffff;
+    box-shadow: u.rem(0) u.rem(11) u.rem(68) u.rem(-3) rgba(0, 0, 0, 0.25);
+    border-radius: u.rem(20);
+    height: u.rem(240);
+    position: relative;
+
+    .commentIcon {
+      position: absolute;
+      bottom: u.rem(-20);
+      right: u.rem(-20);
+      cursor: pointer;
+    }
+  }
+}
+
+.container {
+  padding-left: u.rem(46);
+  padding-right: u.rem(46);
+}
+.container2 {
+  padding-left: u.rem(26);
+  padding-right: u.rem(26);
+}

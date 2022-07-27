@@ -1,0 +1,65 @@
+@use "../utils" as u;
+@use "../globals/colors" as colors;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // min-width: u.rem(50);
+  width: 3.3%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 100;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 58%;
+    background-color: colors.$yellow;
+    transform: translateY(-50%);
+    border-top-right-radius: u.rem(44);
+    border-bottom-right-radius: u.rem(44);
+  }
+
+  & > :not(:last-child) {
+    // margin-bottom: u.rem(22);
+    margin-bottom: 20%;
+
+    @include u.breakpoint(twoxLarge) {
+      margin-bottom: 20%;
+    }
+  }
+
+  button {
+    position: relative;
+    height: u.rem(50);
+    height: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 46%;
+    }
+  }
+
+  .baggingIcon {
+    position: absolute;
+    left: 0;
+    bottom: u.rem(30);
+    width: 100%;
+
+    img {
+      width: 55%;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    display: none;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../utils" as u;
+@use "../globals/colors" as colors;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: u.rem(22) u.rem(20);
+
+  & > :not(:last-child) {
+    margin-right: u.rem(56);
+  }
+}
+
+.LogoTitle {
+  display: flex;
+  align-items: center;
+
+  & > :not(:last-child) {
+    margin-right: u.rem(18);
+  }
+
+  button {
+    transform: rotate(40deg);
+  }
+
+  h1 {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 105%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: colors.$yellow;
+    }
+  }
+}
+
+.pageName {
+  display: flex;
+  align-items: center;
+
+  & > :not(:last-child) {
+    margin-right: u.rem(16);
+  }
+}
