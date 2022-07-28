@@ -58,6 +58,11 @@
   @include u.breakpoint(large) {
     min-width: 2.6rem !important;
     height: 2.6rem;
+    border-radius: 0.4rem !important;
+
+    & > img {
+      border-radius: 0.4rem;
+    }
 
     & > .notficationCircle {
       top: -0.2rem;

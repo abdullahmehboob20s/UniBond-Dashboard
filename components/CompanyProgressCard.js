@@ -1,3 +1,4 @@
+import useMediaQuery from "hooks/useMediaQuery";
 import React from "react";
 import styles from "scss/components/CompanyProgressCard.module.scss";
 
@@ -10,13 +11,24 @@ function CompanyProgressCard({
   inWeek,
   textCenter = false,
   subtitleFontSize = "fs-46px",
+  className,
 }) {
+  const isBellow1024px = useMediaQuery("(max-width : 64em)");
+
   return (
     <div
-      className={`${styles.card}  ${textCenter ? styles.textCenter : ""}`}
+      className={`${styles.card}  ${
+        textCenter ? styles.textCenter : ""
+      } ${className}`}
       style={{ backgroundColor: bg }}
     >
-      <h2 className="fs-18px black weight-6 lh-1_4">{title}</h2>
+      <h2
+        className={`${
+          isBellow1024px ? "fs-14px" : "fs-18px"
+        } black weight-6 lh-1_4`}
+      >
+        {title}
+      </h2>
       <div className={styles.mainTitleWithIcon}>
         <h1 className={`black weight-8 lh-1 ${subtitleFontSize}`}>
           {subtitle}

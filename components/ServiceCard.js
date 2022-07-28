@@ -1,3 +1,4 @@
+import useMediaQuery from "hooks/useMediaQuery";
 import React from "react";
 import styles from "scss/components/ServiceCard.module.scss";
 
@@ -8,10 +9,18 @@ const SkillCard = ({ text }) => {
 };
 
 function ServiceCard({ title, icon, iconClass = "two", fontSize = "fs-30px" }) {
+  const isBellow760px = useMediaQuery("(max-width : 47.5em)");
+
   return (
     <div className={`${styles.card}`}>
-      <img src="images/serviceCardBlob.svg" className={styles.blob} alt="" />
-      <h1 className={`${fontSize} weight-8 black ${styles.title}`}>{title}</h1>
+      <img src="images/triangleBlob.png" className={styles.blob} alt="" />
+      <h1
+        className={`${isBellow760px ? "fs-20px" : "fs-30px"} weight-8 black ${
+          styles.title
+        }`}
+      >
+        {title}
+      </h1>
 
       <div className={styles.skills}>
         <SkillCard text="Focused Designs" />

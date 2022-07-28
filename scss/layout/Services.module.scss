@@ -1,3 +1,5 @@
+@use "../utils" as u;
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -79,4 +81,94 @@
   right: 1.4vw;
   bottom: 2.4vw;
   width: 6.2vw;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+  }
+}
+
+@include u.breakpoint(medium) {
+  .icon1 {
+    right: 2vw;
+    bottom: 4vw;
+    width: 9.4vw;
+  }
+
+  .icon2 {
+    right: 2.4vw;
+    bottom: 4vw;
+    width: 8vw;
+  }
+
+  .icon3 {
+    right: 2.4vw;
+    bottom: 4vw;
+    width: 8vw;
+  }
+
+  .icon4 {
+    right: 4.6vw;
+    bottom: 3.4vw;
+    width: 6vw;
+  }
+
+  .icon5 {
+    right: 2.4vw;
+    bottom: 4vw;
+    width: 10vw;
+  }
+
+  .icon6 {
+    right: 4vw;
+    bottom: 5vw;
+    width: 7vw;
+  }
+
+  .icon7 {
+    right: 2.4vw;
+    bottom: 4vw;
+    width: 10vw;
+  }
+
+  .icon8 {
+    right: 2.4vw;
+    bottom: 4vw;
+    width: 10vw;
+  }
+
+  .icon9 {
+    right: 2.4vw;
+    bottom: 4vw;
+    width: 10vw;
+  }
+
+  .icon10 {
+    right: 2.4vw;
+    bottom: 4vw;
+    width: 10vw;
+  }
+
+  .icon11 {
+    right: 2.4vw;
+    bottom: 4vw;
+    width: 10vw;
+  }
+
+  .icon12 {
+    right: 2.4vw;
+    bottom: 4vw;
+    width: 10vw;
+  }
+}
+
+@include u.breakpoint(small) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 }

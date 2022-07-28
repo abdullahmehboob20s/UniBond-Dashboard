@@ -17,6 +17,7 @@
   z-index: -10;
   width: 7.8vw;
   height: 9vw;
+  // filter: drop-shadow(0px 11px 68px rgba(0, 0, 0, 0.25));
 }
 
 .title {
@@ -47,4 +48,44 @@
 
 .skills > :not(:last-child) {
   margin-bottom: 0.35000000000000003vw;
+}
+
+@include u.breakpoint(large) {
+  .card {
+    padding: 0.8rem 1rem;
+    border-radius: 0.6rem;
+  }
+
+  .title {
+    margin-bottom: 0.8rem;
+  }
+
+  .skillCard {
+    border-radius: 1rem;
+    padding: 0.1rem 0.4rem;
+  }
+
+  .skills > :not(:last-child) {
+    margin-bottom: 0.4rem;
+  }
+
+  .blob {
+    width: 7.8vw;
+    height: 9vw;
+    width: 64%;
+    height: 74%;
+  }
+}
+
+@include u.breakpoint(small) {
+  .blob {
+    width: 7.8vw;
+    height: 9vw;
+    width: 40%;
+    height: 74%;
+  }
+
+  .title {
+    margin-bottom: 0.6rem;
+  }
 }

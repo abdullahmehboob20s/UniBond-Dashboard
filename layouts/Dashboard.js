@@ -6,6 +6,7 @@ import useMediaQuery from "hooks/useMediaQuery";
 
 function Dashboard() {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
+  const isBellow640px = useMediaQuery("(max-width : 40em)");
 
   return (
     <main className={styles.main}>
@@ -15,6 +16,7 @@ function Dashboard() {
         inWeek="25"
         icon="images/icons/development-icon.png"
         iconWidth="36%"
+        className={styles.card1}
       />
       <CompanyProgressCard
         title="Total Audit Ongoing"
@@ -22,6 +24,7 @@ function Dashboard() {
         inWeek="8"
         icon="images/icons/total-audit-icon.png"
         iconWidth="36%"
+        className={styles.card2}
       />
       <CompanyProgressCard
         title="Total Marketing Ongoing"
@@ -29,6 +32,7 @@ function Dashboard() {
         inWeek="15"
         icon="images/icons/total-marketing-icon.png"
         iconWidth="24%"
+        className={styles.card3}
       />
       <CompanyProgressCard
         title="Total Revenue from projects"
@@ -36,6 +40,7 @@ function Dashboard() {
         inWeek="25"
         textCenter={true}
         subtitleFontSize="fs-30px"
+        className={styles.card4}
       />
       <div className={styles.tweets}>
         {/* <img src="images/tweets.png" alt="" /> */}
@@ -78,11 +83,17 @@ function Dashboard() {
           />
           <div className={styles.reportTitles}>
             <div>
-              <h4 className="fs-20px weight-6 black mb-5px">
+              <h4
+                className={`${
+                  isBellow640px ? "fs-12px" : "fs-20px"
+                }  weight-6 black mb-5px`}
+              >
                 Last Audited Project:
               </h4>
               <h2
-                className={`fs-24px black weight-8 lh-1 ${styles.reportLink}`}
+                className={`${
+                  isBellow640px ? "fs-14px" : "fs-24px"
+                } black weight-8 lh-1 ${styles.reportLink}`}
               >
                 www.blockaudit.report
               </h2>

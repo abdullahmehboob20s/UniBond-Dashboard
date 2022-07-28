@@ -128,7 +128,7 @@
   }
 
   @include u.breakpoint(large) {
-    gap: 1.6rem 1.6rem;
+    gap: 1.2rem 1.2rem;
 
     .footer {
       grid-template-columns: 1fr 1fr;
@@ -169,6 +169,97 @@
       .onGoingTitle {
         margin-bottom: 1rem;
       }
+    }
+  }
+
+  @include u.breakpoint(medium) {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: unset;
+
+    .ongoingProjectCode {
+      grid-column: 1/-1;
+    }
+
+    .projectCode {
+      border-radius: u.rem(10);
+
+      img {
+        position: static;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @include u.breakpoint(small) {
+    .footer {
+      grid-template-columns: 1fr;
+      padding: 1rem 1.6rem;
+      gap: 1.6rem;
+
+      .reportIcon {
+        width: 2.6rem;
+      }
+
+      .reportTickIcon {
+        width: 2.6rem;
+      }
+
+      .box1 {
+        grid-column: 1/-1;
+
+        & > :not(:last-child) {
+          margin-right: 1.6rem;
+        }
+      }
+
+      .box {
+        & > :not(:last-child) {
+          margin-bottom: 0.4rem;
+        }
+      }
+    }
+  }
+  @include u.breakpoint(xsmall) {
+    gap: 0.8rem 0.8rem;
+
+    .footer {
+      .reportIcon {
+        width: 2.2rem;
+      }
+
+      .reportTickIcon {
+        width: 2.2rem;
+      }
+
+      .box1 {
+        grid-column: 1/-1;
+
+        & > :not(:last-child) {
+          margin-right: 1.2rem;
+        }
+      }
+
+      .box {
+        & > :not(:last-child) {
+          margin-bottom: 0.4rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 28.125em) {
+    .tweets {
+      grid-column: 1/-1;
+      grid-row: 4/5;
+      min-height: 20rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column: 1/-1;
+      gap: 0.8rem 0.8rem;
     }
   }
 }

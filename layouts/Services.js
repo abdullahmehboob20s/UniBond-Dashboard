@@ -1,8 +1,11 @@
 import ServiceCard from "components/ServiceCard";
+import useMediaQuery from "hooks/useMediaQuery";
 import React from "react";
 import styles from "scss/layout/Services.module.scss";
 
 function Services() {
+  const isBellow1024px = useMediaQuery("(max-width : 64em)");
+
   return (
     <div className={styles.wrapper}>
       <ServiceCard
