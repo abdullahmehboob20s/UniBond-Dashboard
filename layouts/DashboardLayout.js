@@ -4,9 +4,9 @@ import React from "react";
 import styles from "scss/layout/DashboardLayout.module.scss";
 import Navbar from "./Navbar";
 
-function Dashboardlayout({ children }) {
+function Dashboardlayout({ children, showSidebar = true }) {
   return (
-    <div className={styles.dashboard}>
+    <div className={`${styles.dashboard} ${showSidebar ? styles.sidebar : ""}`}>
       <div className={styles.left}>
         <header>
           <Navbar />
@@ -15,9 +15,13 @@ function Dashboardlayout({ children }) {
         <main>{children}</main>
       </div>
 
-      <div className={styles.sidebar}>
-        <Sidebar />
-      </div>
+      {showSidebar ? (
+        <div className={styles.sidebar}>
+          <Sidebar />
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

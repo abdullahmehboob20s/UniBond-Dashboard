@@ -1,0 +1,14 @@
+.contactCard {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    display: flex;
+    width: 4vw;
+
+    svg {
+      width: 1.9vw;
+      height: 1.9vw;
+    }
+  }
+}

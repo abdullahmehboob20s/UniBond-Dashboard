@@ -105,11 +105,11 @@ function Sidebar() {
 
       <div className={styles.container}>
         <div className={styles.messageBox}>
-          <img
+          {/* <img
             src="images/icons/commentYellowIcon.svg"
             className={styles.commentIcon}
             alt=""
-          />
+          /> */}
         </div>
       </div>
     </div>

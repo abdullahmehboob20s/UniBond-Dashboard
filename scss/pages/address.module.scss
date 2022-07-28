@@ -1,0 +1,78 @@
+@use "../globals/colors" as colors;
+
+.page {
+  .contactDetailsWrapper {
+    position: absolute;
+    top: 0;
+    right: 4.444444444444445vw;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .contactDetails {
+      min-height: 50%;
+      background-color: colors.$yellow;
+      box-shadow: 0px 11px 68px rgba(0, 0, 0, 0.25);
+      border-bottom-left-radius: 2.0833333333333335vw;
+      border-bottom-right-radius: 2.0833333333333335vw;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 2.7777777777777777vw 1vw;
+      position: relative;
+
+      .cities {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 52%;
+      }
+
+      .cards {
+        & > :not(:last-child) {
+          margin-bottom: 1vw;
+        }
+      }
+    }
+
+    .places {
+      min-height: 50%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1vw;
+      width: 90%;
+      margin: 0 auto;
+
+      & > div {
+        position: relative;
+
+        & > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .place1,
+        .place2 {
+          border-bottom-left-radius: 2.4305555555555554vw;
+          border-bottom-right-radius: 2.4305555555555554vw;
+        }
+        .place3,
+        .place4 {
+          border-top-left-radius: 2.4305555555555554vw;
+          border-top-right-radius: 2.4305555555555554vw;
+        }
+      }
+    }
+
+    & > div {
+      flex: 1;
+    }
+  }
+}
