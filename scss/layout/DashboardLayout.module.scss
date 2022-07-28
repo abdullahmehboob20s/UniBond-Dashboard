@@ -28,3 +28,18 @@
 .sidebar {
   box-shadow: 17px 4px 148px rgba(244, 187, 0, 0.5);
 }
+
+@include u.breakpoint(large) {
+  .dashboard {
+    &.sidebar {
+      grid-template-columns: 1fr;
+    }
+
+    .left {
+      & > main {
+        padding: 1rem 3%;
+        // padding-left: 2rem;
+      }
+    }
+  }
+}

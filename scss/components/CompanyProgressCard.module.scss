@@ -4,7 +4,6 @@
   flex: 1;
   border-radius: u.rem(20);
   background: #ffffff;
-  padding: u.rem(21) u.rem(34);
   padding: 1vw 1.8vw;
   display: flex;
   flex-direction: column;
@@ -57,5 +56,9 @@
     height: 3em;
     display: flex;
     align-items: flex-end;
+  }
+
+  @include u.breakpoint(large) {
+    padding: u.rem(16) u.rem(22);
   }
 }

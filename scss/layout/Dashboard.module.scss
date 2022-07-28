@@ -18,13 +18,17 @@
     min-height: fit-content;
     position: relative;
 
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+    & > div {
       height: 100%;
     }
+
+    // img {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    // }
   }
 
   .ongoingProjectCode {
@@ -120,6 +124,51 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    gap: 1.6rem 1.6rem;
+
+    .footer {
+      grid-template-columns: 1fr 1fr;
+      padding: 1rem 2rem;
+      gap: 2rem;
+
+      .reportIcon {
+        width: 3rem;
+      }
+
+      .reportTickIcon {
+        width: 3rem;
+      }
+
+      .box1 {
+        grid-column: 1/-1;
+
+        & > :not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+
+      .box {
+        & > :not(:last-child) {
+          margin-bottom: 0.6rem;
+        }
+      }
+    }
+
+    .ongoingProjectCode {
+      border-radius: u.rem(20);
+      padding: 1.2rem;
+
+      & > h1 {
+        padding-left: 1rem;
+      }
+
+      .onGoingTitle {
+        margin-bottom: 1rem;
+      }
     }
   }
 }

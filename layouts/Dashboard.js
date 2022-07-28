@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "scss/layout/Dashboard.module.scss";
 import CompanyProgressCard from "components/CompanyProgressCard";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
+import useMediaQuery from "hooks/useMediaQuery";
 
 function Dashboard() {
+  const isBellow1024px = useMediaQuery("(max-width : 64em)");
+
   return (
     <main className={styles.main}>
       <CompanyProgressCard
@@ -10,21 +14,21 @@ function Dashboard() {
         subtitle="12"
         inWeek="25"
         icon="images/icons/development-icon.png"
-        iconWidth="4.4vw"
+        iconWidth="36%"
       />
       <CompanyProgressCard
         title="Total Audit Ongoing"
         subtitle="05"
         inWeek="8"
         icon="images/icons/total-audit-icon.png"
-        iconWidth="4.4vw"
+        iconWidth="36%"
       />
       <CompanyProgressCard
         title="Total Marketing Ongoing"
         subtitle="13"
         inWeek="15"
         icon="images/icons/total-marketing-icon.png"
-        iconWidth="2.8vw"
+        iconWidth="24%"
       />
       <CompanyProgressCard
         title="Total Revenue from projects"
@@ -34,7 +38,12 @@ function Dashboard() {
         subtitleFontSize="fs-30px"
       />
       <div className={styles.tweets}>
-        <img src="images/tweets.png" alt="" />
+        {/* <img src="images/tweets.png" alt="" /> */}
+        <TwitterTimelineEmbed
+          sourceType="timeline"
+          screenName="uniBondLab"
+          options={{ height: "100%" }}
+        />
       </div>
       <div className={styles.cards}>
         <CompanyProgressCard

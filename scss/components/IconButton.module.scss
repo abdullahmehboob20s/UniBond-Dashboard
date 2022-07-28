@@ -2,9 +2,7 @@
 @use "../globals/colors" as colors;
 
 .button {
-  width: u.rem(51);
-  height: u.rem(51);
-  width: 2.7vw;
+  min-width: 2.7vw !important;
   height: 2.7vw;
 
   background: #ffffff;
@@ -55,5 +53,18 @@
 
     width: 0.9vw;
     height: 0.9vw;
+  }
+
+  @include u.breakpoint(large) {
+    min-width: 2.6rem !important;
+    height: 2.6rem;
+
+    & > .notficationCircle {
+      top: -0.2rem;
+      right: -0.2rem;
+
+      width: 0.7rem;
+      height: 0.7rem;
+    }
   }
 }

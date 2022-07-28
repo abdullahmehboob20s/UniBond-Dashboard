@@ -1,11 +1,20 @@
+import OutsideClickDetector from "hooks/OutsideClickDetector";
 import styles from "scss/components/IconButton.module.scss";
 
 const IconButton = (props) => {
-  const { icon, img, notify = false, children, onClick, ref } = props;
+  const {
+    icon,
+    img,
+    notify = false,
+    children,
+    onClick,
+    ref,
+    className,
+  } = props;
 
   return (
     <div
-      className={`${styles.button} relative`}
+      className={`${styles.button} ${className} relative`}
       onClick={onClick}
       ref={ref ? ref : null}
     >
