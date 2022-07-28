@@ -1,9 +1,14 @@
-import React from "react";
 import styles from "scss/components/IconButton.module.scss";
 
-const IconButton = ({ icon, img, notify = false }) => {
+const IconButton = (props) => {
+  const { icon, img, notify = false, children, onClick, ref } = props;
+
   return (
-    <div className={`${styles.button}`}>
+    <div
+      className={`${styles.button} relative`}
+      onClick={onClick}
+      ref={ref ? ref : null}
+    >
       {icon ? (
         <div className={styles.iconWrap}>
           {notify ? <div className={styles.notficationCircle}></div> : ""}
@@ -15,6 +20,8 @@ const IconButton = ({ icon, img, notify = false }) => {
           <img src={img} alt="" />
         </>
       )}
+
+      {children}
     </div>
   );
 };

@@ -13,6 +13,7 @@
   height: 100%;
   background: #f6f5f9;
   padding: 2.6vw 0;
+  position: relative;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -95,19 +96,16 @@
     }
   }
 
-  .messageBox {
-    background: #ffffff;
-    box-shadow: u.rem(0) u.rem(11) u.rem(68) u.rem(-3) rgba(0, 0, 0, 0.25);
-    border-radius: u.rem(20);
-    height: 12vw;
-    position: relative;
+  .commentIcon {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    cursor: pointer;
+    display: flex;
+    border-radius: 50%;
 
-    .commentIcon {
-      position: absolute;
-      bottom: -1vw;
-      right: -1vw;
+    img {
       width: 4vw;
-      cursor: pointer;
     }
   }
 }

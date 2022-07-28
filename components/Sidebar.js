@@ -3,6 +3,7 @@ import styles from "scss/components/Sidebar.module.scss";
 import SidebarHeader from "./SidebarHeader";
 import { AiOutlineSearch } from "react-icons/ai";
 import UserCard from "./UserCard";
+import MetaMaskDetails from "./MetaMaskDetails";
 
 function Sidebar() {
   return (
@@ -104,14 +105,12 @@ function Sidebar() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles.messageBox}>
-          {/* <img
-            src="images/icons/commentYellowIcon.svg"
-            className={styles.commentIcon}
-            alt=""
-          /> */}
-        </div>
+        <MetaMaskDetails />
       </div>
+
+      <button className={styles.commentIcon}>
+        <img src="images/icons/commentYellowIcon.svg" alt="" />
+      </button>
     </div>
   );
 }
