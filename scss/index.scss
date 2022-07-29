@@ -1,1 +1,18 @@
 @forward "globals";
+@use "./utils" as u;
+
+@include u.breakpoint(xsmall) {
+  .login-form {
+    & .fs-16px {
+      font-size: u.rem(12);
+    }
+
+    & .fs-40px {
+      font-size: u.rem(28);
+    }
+
+    & .fs-10px {
+      font-size: u.rem(9);
+    }
+  }
+}

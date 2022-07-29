@@ -1,13 +1,21 @@
 import "scss/index.scss";
 import { IKContext } from "imagekitio-react";
 import IconsSidebar from "layouts/IconsSidebar";
+import LoginScreen from "components/LoginScreen";
+import { Provider } from "react-redux";
+import { store } from "reduxState/store";
+import BlackScreen from "components/BlackScreen";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <IKContext urlEndpoint="https://ik.imagekit.io/l4k8brcjb/uniBond">
-      <IconsSidebar />
-      <Component {...pageProps} />
-    </IKContext>
+    <Provider store={store}>
+      <IKContext urlEndpoint="https://ik.imagekit.io/l4k8brcjb/uniBond">
+        <IconsSidebar />
+        <LoginScreen />
+        <BlackScreen />
+        <Component {...pageProps} />
+      </IKContext>
+    </Provider>
   );
 }
 

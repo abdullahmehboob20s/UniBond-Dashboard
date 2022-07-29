@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "scss/layout/Navbar.module.scss";
 import IconButton from "components/IconButton";
 import useMediaQuery from "hooks/useMediaQuery";
@@ -6,11 +6,22 @@ import SidebarLeft from "./SidebarLeft";
 import { IoCaretDownCircleSharp, IoMenu } from "react-icons/io5";
 import { IoMdRefresh } from "react-icons/io";
 import SidebarRight from "./SidebarRight";
+import { useDispatch } from "react-redux";
+import { toggleState as toggleBlackScreenState } from "reduxState/slices/blackScreenSlice";
 
 function Navbar() {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
   const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(false);
   const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(
+      toggleBlackScreenState(
+        isLeftSidebarOpen | isRightSidebarOpen ? true : false
+      )
+    );
+  }, [isLeftSidebarOpen, isRightSidebarOpen]);
 
   return (
     <div className={styles.navbar}>
@@ -59,12 +70,6 @@ function Navbar() {
           <SidebarRight state={[isRightSidebarOpen, setIsRightSidebarOpen]} />
         </>
       ) : null}
-
-      <div
-        className={`black-screen ${
-          isLeftSidebarOpen | isRightSidebarOpen ? "show" : ""
-        }`}
-      ></div>
     </div>
   );
 }

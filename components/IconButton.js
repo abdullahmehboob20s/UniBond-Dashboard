@@ -13,22 +13,24 @@ const IconButton = (props) => {
   } = props;
 
   return (
-    <div
-      className={`${styles.button} ${className} relative`}
-      onClick={onClick}
-      ref={ref ? ref : null}
-    >
-      {icon ? (
-        <div className={styles.iconWrap}>
-          {notify ? <div className={styles.notficationCircle}></div> : ""}
-          <img src={icon} alt="" />
-        </div>
-      ) : (
-        <>
-          {notify ? <div className={styles.notficationCircle}></div> : ""}
-          <img src={img} alt="" />
-        </>
-      )}
+    <div ref={ref ? ref : null} className="relative">
+      <div
+        className={`${styles.button} ${className} relative`}
+        onClick={onClick ? onClick : null}
+        disabled={onClick ? false : true}
+      >
+        {icon ? (
+          <div className={styles.iconWrap}>
+            {notify ? <div className={styles.notficationCircle}></div> : ""}
+            <img src={icon} alt="" />
+          </div>
+        ) : (
+          <>
+            {notify ? <div className={styles.notficationCircle}></div> : ""}
+            <img src={img} alt="" />
+          </>
+        )}
+      </div>
 
       {children}
     </div>

@@ -4,7 +4,6 @@
 .button {
   min-width: 2.7vw !important;
   height: 2.7vw;
-
   background: #ffffff;
   box-shadow: u.rem(0) u.rem(8) u.rem(23) rgba(0, 0, 0, 0.21);
   border-radius: 0.7vw;
@@ -12,7 +11,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  //   overflow: hidden;
   position: relative;
 
   & > img {

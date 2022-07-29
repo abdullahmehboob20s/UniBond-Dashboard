@@ -298,6 +298,7 @@ a {
 
 @include u.breakpoint(large) {
   :root {
+    --fs-40px: #{u.rem(34)};
     --fs-30px: #{u.rem(20)};
     --fs-18px: #{u.rem(14)};
     --fs-8px: #{u.rem(8)};

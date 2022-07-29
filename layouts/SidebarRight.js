@@ -13,7 +13,7 @@ function SidebarRight(props) {
 
   return (
     <div
-      className={`${styles.sidebar} ${state ? styles.open : ""}`}
+      className={` ${styles.sidebar} ${state ? styles.open : ""}`}
       ref={sidebarRef}
     >
       <header>

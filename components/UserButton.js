@@ -5,14 +5,14 @@ import OutsideClickDetector from "hooks/OutsideClickDetector";
 
 function UserButton() {
   const [isOn, setOn] = useState(false);
-  const dropdownRef = OutsideClickDetector(() => setOn(false));
 
   const userDropdownHandler = () => {
     setOn(true);
   };
+
   return (
     <IconButton img="images/peoples/user.png" onClick={userDropdownHandler}>
-      <UserDropdown state={[isOn, setOn]} ref={dropdownRef} />
+      <UserDropdown state={[isOn, setOn]} />
     </IconButton>
   );
 }
