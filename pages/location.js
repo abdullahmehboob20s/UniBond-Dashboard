@@ -1,6 +1,6 @@
 import Address from "layouts/Address";
 import DashboardLayout from "layouts/DashboardLayout";
-import styles from "scss/pages/address.module.scss";
+import styles from "scss/pages/location.module.scss";
 import { IoMdCall } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";

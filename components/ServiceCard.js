@@ -1,5 +1,6 @@
 import useMediaQuery from "hooks/useMediaQuery";
 import React from "react";
+import { useSelector } from "react-redux";
 import styles from "scss/components/ServiceCard.module.scss";
 
 const SkillCard = ({ text }) => {
@@ -10,9 +11,10 @@ const SkillCard = ({ text }) => {
 
 function ServiceCard({ title, icon, iconClass = "two", fontSize = "fs-30px" }) {
   const isBellow760px = useMediaQuery("(max-width : 47.5em)");
+  const { isDark } = useSelector((state) => state.themeState);
 
   return (
-    <div className={`${styles.card}`}>
+    <div className={`${styles.card} ${isDark ? styles.dark : ""}`}>
       <img src="images/triangleBlob.png" className={styles.blob} alt="" />
       <h1
         className={`${isBellow760px ? "fs-20px" : "fs-30px"} weight-8 black ${
@@ -28,7 +30,7 @@ function ServiceCard({ title, icon, iconClass = "two", fontSize = "fs-30px" }) {
         <SkillCard text="User Research" />
       </div>
 
-      <img src={icon} className={`${iconClass}`} alt="" />
+      <img src={icon} className={`${iconClass} ${styles.card_img}`} alt="" />
     </div>
   );
 }

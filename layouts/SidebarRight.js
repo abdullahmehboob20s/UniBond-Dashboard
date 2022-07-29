@@ -28,19 +28,19 @@ function SidebarRight(props) {
           <a href="">
             <span className="fs-20px black weight-6">Messages</span>
             <IconButton
-              className={styles.sidebarlinkIcon}
+              wrapperClassName={styles.sidebarlinkIcon}
               icon="images/icons/commentsIcon.svg"
-            ></IconButton>
+            />
           </a>
         </Link>
         <Link href="/" passHref>
           <a>
             <span className="fs-20px black weight-6">Notification</span>
             <IconButton
-              className={styles.sidebarlinkIcon}
+              wrapperClassName={styles.sidebarlinkIcon}
               icon="images/icons/BellIcon.svg"
               notify={true}
-            ></IconButton>
+            />
           </a>
         </Link>
         <Link href="/" passHref>

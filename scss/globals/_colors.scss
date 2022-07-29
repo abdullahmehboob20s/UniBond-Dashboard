@@ -1,16 +1,16 @@
 /* COLORS */
 
-$orange: #d09756;
-$gray: #525252;
-$yellow: #f4bb00;
-$blue: #0a66c2;
-$light-gray: rgba(0, 0, 0, 0.5);
+$orange: var(--color-orange);
+$gray: var(--color-gray);
+$yellow: var(--color-yellow);
+$blue: var(--color-blue);
+$light-gray: var(--color-light-gray);
 
 .black {
-  color: #000000;
+  color: var(--color-black);
 }
 .white {
-  color: #fafcff;
+  color: var(--color-white);
 }
 .orange {
   color: $orange;

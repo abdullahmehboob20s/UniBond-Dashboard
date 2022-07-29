@@ -10,7 +10,7 @@
   left: 0;
   width: u.rem(300);
   height: 100vh;
-  background-color: white;
+  background-color: var(--right-sidebar-bg);
   z-index: 400;
   overflow-y: auto;
   display: flex;

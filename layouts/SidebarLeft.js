@@ -5,10 +5,18 @@ import { IoClose } from "react-icons/io5";
 import IconButton from "components/IconButton";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import SidebarFooter from "./SidebarFooter";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "reduxState/slices/themeSlice";
 
 function SidebarLeft(props) {
   const [state, stateSetter] = props.state;
   const leftSidebarRef = OutsideClickDetector(() => stateSetter(false));
+  const { isDark } = useSelector((state) => state.themeState);
+  const dispatch = useDispatch();
+
+  const themeChanger = () => {
+    dispatch(toggleTheme(!isDark));
+  };
 
   return (
     <div
@@ -16,7 +24,7 @@ function SidebarLeft(props) {
       ref={leftSidebarRef}
     >
       <header>
-        <IconButton icon="images/icons/moonIcon.svg" />
+        <IconButton icon="images/icons/moonIcon.svg" onClick={themeChanger} />
         <button className={styles.closeBtn} onClick={() => stateSetter(false)}>
           <IoClose />
         </button>

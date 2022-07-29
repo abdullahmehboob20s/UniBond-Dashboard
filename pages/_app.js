@@ -5,6 +5,7 @@ import LoginScreen from "components/LoginScreen";
 import { Provider } from "react-redux";
 import { store } from "reduxState/store";
 import BlackScreen from "components/BlackScreen";
+import ReduxStateProvider from "HOC/reduxStateProvider";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }) {
         <IconsSidebar />
         <LoginScreen />
         <BlackScreen />
+        <ReduxStateProvider />
         <Component {...pageProps} />
       </IKContext>
     </Provider>

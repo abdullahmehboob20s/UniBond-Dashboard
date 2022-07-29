@@ -10,10 +10,11 @@ const IconButton = (props) => {
     onClick,
     ref,
     className,
+    wrapperClassName,
   } = props;
 
   return (
-    <div ref={ref ? ref : null} className="relative">
+    <div ref={ref ? ref : null} className={`relative ${wrapperClassName} `}>
       <div
         className={`${styles.button} ${className} relative`}
         onClick={onClick ? onClick : null}

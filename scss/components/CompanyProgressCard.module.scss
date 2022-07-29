@@ -16,7 +16,7 @@
   justify-content: space-between;
   position: relative;
   border-radius: var(--r20px);
-  background: #ffffff;
+  background-color: var(--progress-card-bg) !important;
 
   &::before {
     content: "";

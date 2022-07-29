@@ -10,7 +10,7 @@
   right: 0;
   width: u.rem(300);
   height: 100vh;
-  background-color: white;
+  background-color: var(--right-sidebar-bg);
   z-index: 400;
   overflow-y: auto;
   display: flex;
@@ -45,10 +45,10 @@
       position: relative;
 
       .sidebarlinkIcon {
-        position: absolute;
-        top: 50%;
-        left: $padding-x;
-        transform: translateY(-50%);
+        position: absolute !important;
+        top: 50% !important;
+        left: $padding-x !important;
+        transform: translateY(-50%) !important;
       }
     }
 
