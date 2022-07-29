@@ -9,7 +9,7 @@ import ContactCard from "components/ContactCard";
 export default function AddressPage() {
   return (
     <div className={styles.page}>
-      <DashboardLayout showSidebar={false}>
+      <DashboardLayout showSidebar={false} pageName="Location">
         <Address />
       </DashboardLayout>
 

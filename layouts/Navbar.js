@@ -8,8 +8,9 @@ import { IoMdRefresh } from "react-icons/io";
 import SidebarRight from "./SidebarRight";
 import { useDispatch } from "react-redux";
 import { toggleState as toggleBlackScreenState } from "reduxState/slices/blackScreenSlice";
+import Link from "next/link";
 
-function Navbar() {
+function Navbar({ pageName }) {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
   const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(false);
   const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
@@ -23,9 +24,15 @@ function Navbar() {
     );
   }, [isLeftSidebarOpen, isRightSidebarOpen]);
 
+  const refresh = () => {
+    window.location.reload();
+  };
+
   return (
     <div className={styles.navbar}>
-      <img src="images/white-egg.png" className={styles.logo} alt="" />
+      <Link href="/" passHref>
+        <img src="images/white-egg.png" className={`${styles.logo}`} alt="" />
+      </Link>
 
       {isBellow1024px ? (
         <button
@@ -39,7 +46,7 @@ function Navbar() {
       <div className={styles.pageDetails}>
         <div className={`${styles.LogoTitle}`}>
           <h1 className="fs-30px black weight-8">UniBond</h1>
-          <button className="pointer">
+          <button className="pointer" onClick={refresh}>
             <IoMdRefresh className={`${styles.refreshIcon} gray`} />
           </button>
         </div>
@@ -49,7 +56,7 @@ function Navbar() {
               isBellow1024px ? "fs-12px" : "fs-18px"
             }  weight-6`}
           >
-            Dashboard
+            {pageName}
           </h2>
           <IoCaretDownCircleSharp className={`${styles.downIcon} gray`} />
         </div>

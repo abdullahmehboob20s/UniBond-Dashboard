@@ -18,7 +18,7 @@
     .mapWrapper {
       flex: 1;
       position: relative;
-      border-radius: 1.6vw;
+      border-radius: var(--r20px);
       overflow: hidden;
       box-shadow: u.rem(0) u.rem(11) u.rem(68) rgba(0, 0, 0, 0.4);
 
@@ -34,7 +34,7 @@
     .location {
       background: linear-gradient(180deg, #f4bb00 0%, #ffa901 100%);
       box-shadow: u.rem(0) u.rem(11) u.rem(68) rgba(0, 0, 0, 0.25);
-      border-radius: 1.6vw;
+      border-radius: var(--r20px);
       padding: 2.2vw 4vw;
 
       display: flex;
@@ -78,7 +78,7 @@
         .map {
           // position: static;
           width: 100%;
-          height: 100%;
+          min-height: 100% !important;
           object-fit: cover;
         }
       }
@@ -113,7 +113,8 @@
 
       .mapWrapper {
         border-radius: 1rem;
-        // min-height: 20rem;
+        min-height: auto !important;
+        display: flex;
 
         .map {
           position: static;

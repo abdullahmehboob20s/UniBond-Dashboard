@@ -12,7 +12,7 @@ function IconsSidebar() {
 
   return (
     <div className={styles.sidebar}>
-      <Link href="#" passHref>
+      <Link href="/" passHref>
         <button
           className={`pointer ${id === "1" ? styles.active : ""}`}
           onClick={(e) => IDhandler(e.currentTarget.id)}
@@ -22,7 +22,7 @@ function IconsSidebar() {
           <IKImage lqip={{ active: true }} path="/icons/homeicon.svg" alt="" />
         </button>
       </Link>
-      <Link href="#" passHref>
+      <Link href="/services" passHref>
         <button
           className={`pointer  ${id === "2" ? styles.active : ""}`}
           onClick={(e) => IDhandler(e.currentTarget.id)}
@@ -72,7 +72,7 @@ function IconsSidebar() {
           />
         </button>
       </Link>
-      <Link href="#" passHref>
+      <Link href="/location" passHref>
         <button
           className={`pointer  ${id === "6" ? styles.active : ""}`}
           onClick={(e) => IDhandler(e.currentTarget.id)}

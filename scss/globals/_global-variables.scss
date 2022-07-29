@@ -1,0 +1,12 @@
+@use "../utils" as u;
+:root {
+  --r20px: 1.3888888888888888vw;
+  --r30px: 2.0833333333333335vw;
+}
+
+@include u.breakpoint(large) {
+  :root {
+    --r20px: #{u.rem(14)};
+    --r30px: #{u.rem(20)};
+  }
+}

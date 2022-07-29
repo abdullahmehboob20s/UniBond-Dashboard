@@ -5,14 +5,14 @@ import React from "react";
 import styles from "scss/layout/DashboardLayout.module.scss";
 import Navbar from "./Navbar";
 
-function Dashboardlayout({ children, showSidebar = true }) {
+function Dashboardlayout({ children, showSidebar = true, pageName }) {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
 
   return (
     <div className={`${styles.dashboard} ${showSidebar ? styles.sidebar : ""}`}>
       <div className={styles.left}>
         <header>
-          <Navbar />
+          <Navbar pageName={pageName} />
         </header>
 
         <main>{children}</main>

@@ -109,7 +109,8 @@ function Sidebar() {
       </div>
 
       <button className={styles.commentIcon}>
-        <img src="images/icons/commentYellowIcon.svg" alt="" />
+        {/* IF YOU WANT TO USE IT, YOU CAN UNCOMMENT IT ============= */}
+        {/* <img src="images/icons/commentYellowIcon.svg" alt="" /> */}
       </button>
     </div>
   );

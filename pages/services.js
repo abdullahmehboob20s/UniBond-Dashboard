@@ -4,7 +4,7 @@ import Services from "layouts/Services";
 export default function ServicesPage() {
   return (
     <div>
-      <DashboardLayout>
+      <DashboardLayout pageName="Services">
         <Services />
       </DashboardLayout>
     </div>

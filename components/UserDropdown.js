@@ -23,7 +23,9 @@ function UserDropdown(props) {
       <button className={`${styles.btn} weight-6`} onClick={login}>
         Login
       </button>
-      <button className={`${styles.btn} weight-6`}>Create Account</button>
+      <button className={`${styles.btn} weight-6`} onClick={login}>
+        Create Account
+      </button>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import styles from "scss/layout/Dashboard.module.scss";
 import CompanyProgressCard from "components/CompanyProgressCard";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import useMediaQuery from "hooks/useMediaQuery";
+import { FaTwitter } from "react-icons/fa";
 
 function Dashboard() {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
@@ -25,6 +26,7 @@ function Dashboard() {
         icon="images/icons/total-audit-icon.png"
         iconWidth="36%"
         className={styles.card2}
+        flipCard={true}
       />
       <CompanyProgressCard
         title="Total Marketing Ongoing"
@@ -44,11 +46,20 @@ function Dashboard() {
       />
       <div className={styles.tweets}>
         {/* <img src="images/tweets.png" alt="" /> */}
-        <TwitterTimelineEmbed
-          sourceType="timeline"
-          screenName="uniBondLab"
-          options={{ height: "100%" }}
-        />
+        <header>
+          <span className={styles.icon}>
+            <FaTwitter color="white" />
+          </span>
+          <p className={styles.tweetsTitle}>@uni.bond</p>
+        </header>
+        <main>
+          <TwitterTimelineEmbed
+            sourceType="timeline"
+            screenName="uniBondLab"
+            options={{ height: "100%" }}
+            noHeader={true}
+          />
+        </main>
       </div>
       <div className={styles.cards}>
         <CompanyProgressCard
