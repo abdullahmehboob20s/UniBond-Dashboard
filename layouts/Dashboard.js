@@ -66,7 +66,7 @@ function Dashboard() {
           title="Total Projects Completed"
           subtitle="405"
           inWeek="31"
-          bg="#F4BB00"
+          bg="#F4BB00 !important"
         />
         <CompanyProgressCard
           title="Total Revenue from projects"
