@@ -25,7 +25,7 @@ function Navbar() {
         </button>
       ) : null}
 
-      <div>
+      <div className={styles.pageDetails}>
         <div className={`${styles.LogoTitle}`}>
           <h1 className="fs-30px black weight-8">UniBond</h1>
           <button className="pointer">

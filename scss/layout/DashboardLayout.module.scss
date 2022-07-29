@@ -31,6 +31,8 @@
 
 @include u.breakpoint(large) {
   .dashboard {
+    height: auto;
+
     &.sidebar {
       grid-template-columns: 1fr;
     }

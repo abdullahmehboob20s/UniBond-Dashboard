@@ -1,3 +1,4 @@
+@use "../utils" as u;
 @use "../globals/colors" as colors;
 
 .page {
@@ -73,6 +74,18 @@
 
     & > div {
       flex: 1;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    .contactDetailsWrapper {
+      // display: none;
+      position: static;
+      width: 100%;
+
+      .cities {
+        display: none;
+      }
     }
   }
 }

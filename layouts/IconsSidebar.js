@@ -17,6 +17,7 @@ function IconsSidebar() {
           className={`pointer ${id === "1" ? styles.active : ""}`}
           onClick={(e) => IDhandler(e.currentTarget.id)}
           id="1"
+          data-icon-name="Home"
         >
           <IKImage lqip={{ active: true }} path="/icons/homeicon.svg" alt="" />
         </button>
@@ -26,6 +27,7 @@ function IconsSidebar() {
           className={`pointer  ${id === "2" ? styles.active : ""}`}
           onClick={(e) => IDhandler(e.currentTarget.id)}
           id="2"
+          data-icon-name="Services"
         >
           <IKImage lqip={{ active: true }} path="/icons/bagicon.svg" alt="" />
         </button>
@@ -61,6 +63,7 @@ function IconsSidebar() {
           className={`pointer  ${id === "5" ? styles.active : ""}`}
           onClick={(e) => IDhandler(e.currentTarget.id)}
           id="5"
+          data-icon-name="Blog"
         >
           <IKImage
             lqip={{ active: true }}
@@ -87,6 +90,7 @@ function IconsSidebar() {
           className={`pointer  ${id === "7" ? styles.active : ""}`}
           onClick={(e) => IDhandler(e.currentTarget.id)}
           id="7"
+          data-icon-name="Payment"
         >
           <IKImage
             lqip={{ active: true }}

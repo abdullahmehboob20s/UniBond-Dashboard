@@ -60,6 +60,83 @@
   }
 
   @include u.breakpoint(large) {
-    display: none;
+    height: 4rem;
+    width: 100%;
+    top: unset;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3rem;
+    align-items: center;
+    // padding-bottom: 1rem;
+
+    $icon-szie: 1.2rem;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-top-right-radius: unset;
+      border-bottom-right-radius: unset;
+    }
+
+    & > :not(:last-child) {
+      margin-bottom: 0%;
+      @include u.breakpoint(twoxLarge) {
+        margin-bottom: 0%;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: auto;
+      flex-direction: column-reverse;
+
+      &::before {
+        content: attr(data-icon-name);
+        margin-top: 0.3rem;
+        font-size: u.rem(12);
+        font-weight: 600;
+        color: colors.$gray;
+      }
+
+      img {
+        width: $icon-szie;
+        filter: invert(1);
+      }
+    }
+
+    button:nth-child(2) {
+      img {
+        width: $icon-szie + 0.1rem;
+      }
+    }
+    button:nth-child(3) {
+      img {
+        width: $icon-szie + 0.2rem;
+      }
+    }
+    button:nth-child(4) {
+      img {
+        width: $icon-szie + 0.3rem;
+      }
+    }
+
+    button:nth-child(3),
+    button:nth-child(4),
+    button:nth-child(6) {
+      display: none;
+    }
+
+    .baggingIcon {
+      display: none;
+    }
+  }
+
+  @include u.breakpoint(xsmall) {
+    padding: 0 1.6rem;
   }
 }
