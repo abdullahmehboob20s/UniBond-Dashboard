@@ -7,17 +7,16 @@ const ReduxStateProvider = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (isDark !== undefined) {
-      if (isDark === true) {
-        // Set value of  darkmode to dark
-        document.documentElement.setAttribute("data-theme", "dark");
-        window.localStorage.setItem("theme", "dark");
-      } else {
-        // Set value of  darkmode to light
-        document.documentElement.removeAttribute("data-theme");
-        window.localStorage.setItem("theme", "light");
-      }
+    if (isDark == true) {
+      // Set value of  darkmode to dark
+      document.documentElement.setAttribute("data-theme", "dark");
+      window.localStorage.setItem("theme", "dark");
+      return;
     }
+
+    // Set value of  darkmode to light
+    document.documentElement.removeAttribute("data-theme");
+    window.localStorage.setItem("theme", "light");
   }, [isDark]);
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const ReduxStateProvider = () => {
     );
     // Set initial darkmode to light
     // setDarkTheme(initialColorValue === "dark");
-    dispatch(toggleTheme(false));
+    dispatch(toggleTheme(initialColorValue === "dark"));
   }, []);
 
   return null;
