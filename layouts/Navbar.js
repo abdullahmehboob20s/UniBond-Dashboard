@@ -31,7 +31,7 @@ function Navbar({ pageName }) {
   return (
     <div className={styles.navbar}>
       <Link href="/" passHref>
-        <img src="images/white-egg.png" className={`${styles.logo}`} alt="" />
+        <img src="images/Eggg.png" className={`${styles.logo}`} alt="" />
       </Link>
 
       {isBellow1024px ? (

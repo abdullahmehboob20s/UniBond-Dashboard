@@ -28,23 +28,30 @@ function LoginScreen() {
       <form>
         <main>
           <div>
-            <label htmlFor="userId" className="gray fs-16px weight-5">
+            <label htmlFor="userId" className="unchange-gray fs-16px weight-5">
               User ID
             </label>
-            <input type="text" id="userId" className="gray fs-16px weight-5" />
+            <input
+              type="text"
+              id="userId"
+              className="unchange-gray fs-16px weight-5"
+            />
           </div>
           <div>
-            <label htmlFor="password" className="gray fs-16px weight-5">
+            <label
+              htmlFor="password"
+              className="unchange-gray fs-16px weight-5"
+            >
               Password
             </label>
             <input
               type="password"
               id="password"
-              className="gray fs-16px weight-5"
+              className="unchange-gray fs-16px weight-5"
             />
           </div>
         </main>
-        <p className="gray fs-10px weight-7">
+        <p className="unchange-gray fs-10px weight-7">
           By logging in you agree to our privacy policy.
         </p>
 
@@ -58,15 +65,15 @@ function LoginScreen() {
               <MdKeyboardArrowRight />
             </span>
           </button>
-          <a href="#" className="gray fs-16px underline weight-5">
+          <a href="#" className="unchange-gray fs-16px underline weight-5">
             Forgot Password
           </a>
         </footer>
       </form>
 
-      <p className="fs-16px gray weight-5">
+      <p className="fs-16px unchange-gray weight-5">
         Not a user yet?{" "}
-        <a href="#" className="gray underline">
+        <a href="#" className="unchange-gray underline">
           Register now!
         </a>
       </p>

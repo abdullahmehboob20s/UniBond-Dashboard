@@ -3,11 +3,11 @@ import { useDispatch } from "react-redux";
 import { toggleState as toggleLoginScreenState } from "reduxState/slices/loginScreenSlice";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import { toggleState as toggleBlackScreenState } from "reduxState/slices/blackScreenSlice";
+import { forwardRef } from "react";
 
-function UserDropdown(props) {
+const UserDropdown = forwardRef((props, ref) => {
   const [stateValue, stateSetter] = props.state;
   const dispatch = useDispatch();
-  const dropdownRef = OutsideClickDetector(() => stateSetter(false));
 
   const login = () => {
     dispatch(toggleLoginScreenState(true));
@@ -18,7 +18,7 @@ function UserDropdown(props) {
   return (
     <div
       className={`${styles.dropdown} ${stateValue ? styles.open : ""}`}
-      ref={dropdownRef}
+      ref={ref}
     >
       <button className={`${styles.btn} weight-6`} onClick={login}>
         Login
@@ -28,6 +28,8 @@ function UserDropdown(props) {
       </button>
     </div>
   );
-}
+});
+
+UserDropdown.displayName = "UserDropdown";
 
 export default UserDropdown;

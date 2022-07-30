@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   // min-width: u.rem(50);
-  width: 3%;
+  width: 2.5%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
     top: 50%;
     left: 0;
     width: 100%;
-    height: 56%;
+    height: 52%;
     background-color: colors.$yellow;
     transform: translateY(-50%);
     border-top-right-radius: 2.8vw;
@@ -46,7 +46,7 @@
     pointer-events: visible;
 
     img {
-      width: 46%;
+      width: 48%;
     }
   }
 

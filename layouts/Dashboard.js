@@ -4,6 +4,7 @@ import CompanyProgressCard from "components/CompanyProgressCard";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import useMediaQuery from "hooks/useMediaQuery";
 import { FaTwitter } from "react-icons/fa";
+import FlipCard from "components/FlipCard";
 
 function Dashboard() {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
@@ -19,15 +20,26 @@ function Dashboard() {
         iconWidth="36%"
         className={styles.card1}
       />
-      <CompanyProgressCard
-        title="Total Audit Ongoing"
-        subtitle="05"
-        inWeek="8"
-        icon="images/icons/total-audit-icon.png"
-        iconWidth="36%"
-        className={styles.card2}
-        flipCard={true}
+      <FlipCard
+        frontCard={
+          <CompanyProgressCard
+            title="Total Audit Ongoing"
+            subtitle="05"
+            inWeek="8"
+            iconWidth="36%"
+            icon="images/icons/total-audit-icon.png"
+          />
+        }
+        backCard={
+          <CompanyProgressCard
+            title="Total Projects Completed"
+            subtitle="405"
+            inWeek="8"
+            isYellowCard={true}
+          />
+        }
       />
+
       <CompanyProgressCard
         title="Total Marketing Ongoing"
         subtitle="13"
@@ -66,7 +78,7 @@ function Dashboard() {
           title="Total Projects Completed"
           subtitle="405"
           inWeek="31"
-          bg="#F4BB00 !important"
+          isYellowCard={true}
         />
         <CompanyProgressCard
           title="Total Revenue from projects"

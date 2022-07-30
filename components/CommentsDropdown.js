@@ -1,5 +1,5 @@
 import OutsideClickDetector from "hooks/OutsideClickDetector";
-import React from "react";
+import React, { forwardRef } from "react";
 import styles from "scss/components/CommentsDropdown.module.scss";
 import IconButton from "./IconButton";
 
@@ -19,14 +19,13 @@ const UserCard = ({ img, title, notify, notficationCount }) => {
   );
 };
 
-function CommentsDropdown(props) {
+const CommentsDropdown = React.forwardRef((props, ref) => {
   const [stateValue, stateSetter] = props.state;
-  const dropdownRef = OutsideClickDetector(() => stateSetter(false));
 
   return (
     <div
       className={`${styles.dropdown} ${stateValue ? styles.open : ""}`}
-      ref={dropdownRef}
+      ref={ref}
     >
       <UserCard
         img="images/icons/userIcon.png"
@@ -51,6 +50,8 @@ function CommentsDropdown(props) {
       />
     </div>
   );
-}
+});
+
+CommentsDropdown.displayName = "CommentsDropdown";
 
 export default CommentsDropdown;

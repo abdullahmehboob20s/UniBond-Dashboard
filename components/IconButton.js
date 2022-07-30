@@ -1,20 +1,20 @@
 import OutsideClickDetector from "hooks/OutsideClickDetector";
+import { forwardRef } from "react";
 import styles from "scss/components/IconButton.module.scss";
 
-const IconButton = (props) => {
+const IconButton = forwardRef((props, ref) => {
   const {
     icon,
     img,
     notify = false,
     children,
     onClick,
-    ref,
     className,
     wrapperClassName,
   } = props;
 
   return (
-    <div ref={ref ? ref : null} className={`relative ${wrapperClassName} `}>
+    <div ref={ref} className={`relative ${wrapperClassName} `}>
       <div
         className={`${styles.button} ${className} relative`}
         onClick={onClick ? onClick : null}
@@ -36,6 +36,8 @@ const IconButton = (props) => {
       {children}
     </div>
   );
-};
+});
+
+IconButton.displayName = "IconButton";
 
 export default IconButton;

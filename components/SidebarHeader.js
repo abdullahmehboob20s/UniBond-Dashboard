@@ -1,11 +1,15 @@
+import SidebarButtonDropdownHOC from "HOC/SidebarButtonDropdownHOC";
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "reduxState/slices/themeSlice";
 import styles from "scss/components/SidebarHeader.module.scss";
+import BellDropdown from "./BellDropdown";
 import BellIcon from "./BellIcon";
+import CommentsDropdown from "./CommentsDropdown";
 import CommentsIcon from "./CommentsIcon";
 import IconButton from "./IconButton";
 import UserButton from "./UserButton";
+import UserDropdown from "./UserDropdown";
 
 function SidebarHeader() {
   const { isDark } = useSelector((state) => state.themeState);
@@ -18,9 +22,28 @@ function SidebarHeader() {
   return (
     <div className={styles.wrapper}>
       <IconButton icon="images/icons/moonIcon.svg" onClick={themeChanger} />
-      <CommentsIcon />
-      <BellIcon />
-      <UserButton />
+      <SidebarButtonDropdownHOC
+        Button={IconButton}
+        Dropdown={CommentsDropdown}
+        buttonProps={{
+          icon: "images/icons/commentsIcon.svg",
+        }}
+      />
+      <SidebarButtonDropdownHOC
+        Button={IconButton}
+        Dropdown={BellDropdown}
+        buttonProps={{
+          notify: true,
+          icon: "images/icons/BellIcon.svg",
+        }}
+      />
+      <SidebarButtonDropdownHOC
+        Button={IconButton}
+        Dropdown={UserDropdown}
+        buttonProps={{
+          img: "images/peoples/user.png",
+        }}
+      />
     </div>
   );
 }
