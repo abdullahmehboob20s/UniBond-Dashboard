@@ -5,9 +5,9 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 import useMediaQuery from "hooks/useMediaQuery";
 import { FaTwitter } from "react-icons/fa";
 import FlipCard from "components/FlipCard";
+import { IKImage } from "imagekitio-react";
 
 function Dashboard() {
-  const isBellow1024px = useMediaQuery("(max-width : 64em)");
   const isBellow640px = useMediaQuery("(max-width : 40em)");
 
   return (
@@ -16,7 +16,7 @@ function Dashboard() {
         title="Total Development Ongoing"
         subtitle="12"
         inWeek="25"
-        icon="images/icons/development-icon.png"
+        icon="icons/development-icon.png"
         iconWidth="36%"
         className={styles.card1}
       />
@@ -27,7 +27,7 @@ function Dashboard() {
             subtitle="05"
             inWeek="8"
             iconWidth="36%"
-            icon="images/icons/total-audit-icon.png"
+            icon="icons/total-audit-icon.png"
           />
         }
         backCard={
@@ -44,7 +44,7 @@ function Dashboard() {
         title="Total Marketing Ongoing"
         subtitle="13"
         inWeek="15"
-        icon="images/icons/total-marketing-icon.png"
+        icon="icons/total-marketing-icon.png"
         iconWidth="24%"
         className={styles.card3}
       />
@@ -57,7 +57,11 @@ function Dashboard() {
         className={styles.card4}
       />
       <div className={styles.tweets}>
-        {/* <img src="images/tweets.png" alt="" /> */}
+        {/* <IKImage
+        
+        loading="lazy"
+        lqip={{ active: true }}
+        path="images/tweets.png" alt="" /> */}
         <header>
           <span className={styles.icon}>
             <FaTwitter color="white" />
@@ -93,14 +97,21 @@ function Dashboard() {
           Ongoing Project open code.
         </h1>
         <div className={styles.projectCode}>
-          <img src="images/code.png" alt="" />
+          <IKImage
+            path="images/code.png"
+            loading="lazy"
+            lqip={{ active: true }}
+            alt=""
+          />
         </div>
       </div>
 
       <div className={styles.footer}>
         <div className={styles.box1}>
-          <img
-            src="images/blockaudit-report.svg"
+          <IKImage
+            path="images/blockaudit-report.svg"
+            loading="lazy"
+            lqip={{ active: true }}
             className={styles.reportIcon}
             alt=""
           />
@@ -121,8 +132,10 @@ function Dashboard() {
                 www.blockaudit.report
               </h2>
             </div>
-            <img
-              src="images/icons/grayYellowTick.svg"
+            <IKImage
+              path="icons/grayYellowTick.svg"
+              loading="lazy"
+              lqip={{ active: true }}
               className={styles.reportTickIcon}
               alt=""
             />

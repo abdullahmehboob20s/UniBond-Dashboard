@@ -1,4 +1,5 @@
 import OutsideClickDetector from "hooks/OutsideClickDetector";
+import { IKImage } from "imagekitio-react";
 import { forwardRef } from "react";
 import styles from "scss/components/IconButton.module.scss";
 
@@ -23,12 +24,17 @@ const IconButton = forwardRef((props, ref) => {
         {icon ? (
           <div className={styles.iconWrap}>
             {notify ? <div className={styles.notficationCircle}></div> : ""}
-            <img src={icon} alt="" />
+            <IKImage
+              path={icon}
+              alt=""
+              loading="lazy"
+              lqip={{ active: true }}
+            />
           </div>
         ) : (
           <>
             {notify ? <div className={styles.notficationCircle}></div> : ""}
-            <img src={img} alt="" />
+            <IKImage path={img} alt="" loading="lazy" lqip={{ active: true }} />
           </>
         )}
       </div>

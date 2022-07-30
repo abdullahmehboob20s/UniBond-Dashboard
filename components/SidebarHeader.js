@@ -21,12 +21,12 @@ function SidebarHeader() {
 
   return (
     <div className={styles.wrapper}>
-      <IconButton icon="images/icons/moonIcon.svg" onClick={themeChanger} />
+      <IconButton icon="icons/moonIcon.svg" onClick={themeChanger} />
       <SidebarButtonDropdownHOC
         Button={IconButton}
         Dropdown={CommentsDropdown}
         buttonProps={{
-          icon: "images/icons/commentsIcon.svg",
+          icon: "icons/commentsIcon.svg",
         }}
       />
       <SidebarButtonDropdownHOC
@@ -34,14 +34,14 @@ function SidebarHeader() {
         Dropdown={BellDropdown}
         buttonProps={{
           notify: true,
-          icon: "images/icons/BellIcon.svg",
+          icon: "icons/BellIcon.svg",
         }}
       />
       <SidebarButtonDropdownHOC
         Button={IconButton}
         Dropdown={UserDropdown}
         buttonProps={{
-          img: "images/peoples/user.png",
+          img: "peoples/user.png",
         }}
       />
     </div>

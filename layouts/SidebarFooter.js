@@ -1,3 +1,4 @@
+import { IKImage } from "imagekitio-react";
 import Link from "next/link";
 import React from "react";
 import {
@@ -61,10 +62,12 @@ function SidebarFooter({ className }) {
           All Rights Reserved uni.bond 2022 Made With
         </span>{" "}
         ❤️ <span className="light-gray">In</span>
-        <img
-          src="images/flag.png"
+        <IKImage
+          path="images/flag.png"
           style={{ position: "relative", top: ".1rem", left: ".3rem" }}
           alt="as"
+          loading="lazy"
+          lqip={{ active: true }}
         />
       </p>
     </footer>

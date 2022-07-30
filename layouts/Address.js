@@ -1,4 +1,5 @@
 import useMediaQuery from "hooks/useMediaQuery";
+import { IKImage } from "imagekitio-react";
 import React from "react";
 import styles from "scss/layout/Address.module.scss";
 
@@ -9,13 +10,21 @@ function Address() {
     <div className={styles.wrapper}>
       <main>
         <div className={styles.mapWrapper}>
-          <img src="images/map.png" className={styles.map} alt="" />
+          <IKImage
+            path="images/map.png"
+            className={styles.map}
+            loading="lazy"
+            lqip={{ active: true }}
+            alt=""
+          />
         </div>
 
         <div className={styles.location}>
-          <img
-            src="images/icons/location-icon.svg"
+          <IKImage
+            path="icons/location-icon.svg"
             className={styles.locationIcon}
+            loading="lazy"
+            lqip={{ active: true }}
             alt=""
           />
 

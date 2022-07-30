@@ -7,10 +7,21 @@ import { store } from "reduxState/store";
 import BlackScreen from "components/BlackScreen";
 import ReduxStateProvider from "HOC/ReduxStateProvider";
 
+{
+  /* <IKImage
+        path="/images/partners-card-img.png"
+        className="w-full"
+        
+        loading="lazy"
+        lqip={{ active: true }}
+        alt=""
+      /> */
+}
+
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <IKContext urlEndpoint="https://ik.imagekit.io/l4k8brcjb/uniBond">
+      <IKContext urlEndpoint="https://ik.imagekit.io/l4k8brcjb/uniBond/">
         <IconsSidebar />
         <LoginScreen />
         <BlackScreen />

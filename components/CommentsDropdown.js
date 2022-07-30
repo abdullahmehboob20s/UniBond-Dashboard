@@ -28,26 +28,18 @@ const CommentsDropdown = React.forwardRef((props, ref) => {
       ref={ref}
     >
       <UserCard
-        img="images/icons/userIcon.png"
+        img="icons/userIcon.png"
         title="James Green"
         notify={true}
         notficationCount={3}
       />
+      <UserCard img="icons/userIcon.png" title="Carmen Lewis" notify={true} />
       <UserCard
-        img="images/icons/userIcon.png"
-        title="Carmen Lewis"
-        notify={true}
-      />
-      <UserCard
-        img="images/icons/userIcon.png"
+        img="icons/userIcon.png"
         title="Michael Richard"
         notify={false}
       />
-      <UserCard
-        img="images/icons/userIcon.png"
-        title="Nicole James"
-        notify={false}
-      />
+      <UserCard img="icons/userIcon.png" title="Nicole James" notify={false} />
     </div>
   );
 });

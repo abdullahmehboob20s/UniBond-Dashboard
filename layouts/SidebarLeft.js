@@ -24,7 +24,7 @@ function SidebarLeft(props) {
       ref={leftSidebarRef}
     >
       <header>
-        <IconButton icon="images/icons/moonIcon.svg" onClick={themeChanger} />
+        <IconButton icon="icons/moonIcon.svg" onClick={themeChanger} />
         <button className={styles.closeBtn} onClick={() => stateSetter(false)}>
           <IoClose />
         </button>
@@ -41,7 +41,7 @@ function SidebarLeft(props) {
             Home
           </a>
         </Link>
-        <Link href="/" passHref>
+        <Link href="/services" passHref>
           <a href="" className="fs-16px black weight-6">
             Services
           </a>
@@ -56,7 +56,7 @@ function SidebarLeft(props) {
             Community
           </a>
         </Link>
-        <Link href="/" passHref>
+        <Link href="/location" passHref>
           <a href="" className="fs-16px black weight-6">
             Address
           </a>

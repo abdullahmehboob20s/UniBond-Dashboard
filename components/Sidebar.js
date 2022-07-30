@@ -4,6 +4,7 @@ import SidebarHeader from "./SidebarHeader";
 import { AiOutlineSearch } from "react-icons/ai";
 import UserCard from "./UserCard";
 import MetaMaskDetails from "./MetaMaskDetails";
+import { IKImage } from "imagekitio-react";
 
 function Sidebar() {
   return (
@@ -24,80 +25,80 @@ function Sidebar() {
         <main className={styles.usersCards}>
           <UserCard
             notify={true}
-            img="images/peoples/user1.png"
+            img="peoples/user1.png"
             name="Mike Taylor"
             skill="Solidity Expert"
           />
           <UserCard
             notify={true}
-            img="images/peoples/user2.png"
+            img="peoples/user2.png"
             name="James Green"
             skill="Solidity Expert"
           />
           <UserCard
             notify={true}
-            img="images/peoples/user3.png"
+            img="peoples/user3.png"
             name="Carmen Lewis"
             skill="Solidity Expert"
           />
           <UserCard
             notify={true}
-            img="images/peoples/user4.png"
+            img="peoples/user4.png"
             name="Michael Richard"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user1.png"
+            img="peoples/user1.png"
             name="Nicole James"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user2.png"
+            img="peoples/user2.png"
             name="Carmen Lewis"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user4.png"
+            img="peoples/user4.png"
             name="Michael Richard"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user1.png"
+            img="peoples/user1.png"
             name="Nicole James"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user2.png"
+            img="peoples/user2.png"
             name="Carmen Lewis"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user4.png"
+            img="peoples/user4.png"
             name="Michael Richard"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user1.png"
+            img="peoples/user1.png"
             name="Nicole James"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user2.png"
+            img="peoples/user2.png"
             name="Carmen Lewis"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user4.png"
+            img="peoples/user4.png"
             name="Michael Richard"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user1.png"
+            img="peoples/user1.png"
             name="Nicole James"
             skill="Solidity Expert"
           />
           <UserCard
-            img="images/peoples/user2.png"
+            img="peoples/user2.png"
             name="Carmen Lewis"
             skill="Solidity Expert"
           />
@@ -110,7 +111,12 @@ function Sidebar() {
 
       <button className={styles.commentIcon}>
         {/* IF YOU WANT TO USE IT, YOU CAN UNCOMMENT IT ============= */}
-        {/* <img src="images/icons/commentYellowIcon.svg" alt="" /> */}
+        {/* <IKImage
+          path="icons/commentYellowIcon.svg"
+          alt=""
+          loading="lazy"
+          lqip={{ active: true }}
+        /> */}
       </button>
     </div>
   );

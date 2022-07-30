@@ -19,7 +19,12 @@ function IconsSidebar() {
           id="1"
           data-icon-name="Home"
         >
-          <IKImage lqip={{ active: true }} path="/icons/homeicon.svg" alt="" />
+          <IKImage
+            loading="lazy"
+            lqip={{ active: true }}
+            alt=""
+            path="/icons/homeicon.svg"
+          />
         </button>
       </Link>
       <Link href="/services" passHref>
@@ -29,7 +34,12 @@ function IconsSidebar() {
           id="2"
           data-icon-name="Services"
         >
-          <IKImage lqip={{ active: true }} path="/icons/bagicon.svg" alt="" />
+          <IKImage
+            loading="lazy"
+            lqip={{ active: true }}
+            alt=""
+            path="/icons/bagicon.svg"
+          />
         </button>
       </Link>
       <Link href="#" passHref>
@@ -39,9 +49,10 @@ function IconsSidebar() {
           id="3"
         >
           <IKImage
+            loading="lazy"
             lqip={{ active: true }}
-            path="/icons/currenticon.svg"
             alt=""
+            path="/icons/currenticon.svg"
           />
         </button>
       </Link>
@@ -52,9 +63,10 @@ function IconsSidebar() {
           id="4"
         >
           <IKImage
+            loading="lazy"
             lqip={{ active: true }}
-            path="/icons/communityicon.svg"
             alt=""
+            path="/icons/communityicon.svg"
           />
         </button>
       </Link>
@@ -66,9 +78,10 @@ function IconsSidebar() {
           data-icon-name="Blog"
         >
           <IKImage
+            loading="lazy"
             lqip={{ active: true }}
-            path="/icons/bitcoinicon.svg"
             alt=""
+            path="/icons/bitcoinicon.svg"
           />
         </button>
       </Link>
@@ -79,9 +92,10 @@ function IconsSidebar() {
           id="6"
         >
           <IKImage
+            loading="lazy"
             lqip={{ active: true }}
-            path="/icons/locationicon.svg"
             alt=""
+            path="/icons/locationicon.svg"
           />
         </button>
       </Link>
@@ -93,9 +107,10 @@ function IconsSidebar() {
           data-icon-name="Payment"
         >
           <IKImage
+            loading="lazy"
             lqip={{ active: true }}
-            path="/icons/bitcoin-icon.svg"
             alt=""
+            path="/icons/bitcoin-icon.svg"
           />
         </button>
       </Link>
@@ -108,9 +123,10 @@ function IconsSidebar() {
           id="8"
         >
           <IKImage
+            loading="lazy"
             lqip={{ active: true }}
-            path="/icons/bagging-icon.svg"
             alt=""
+            path="/icons/bagging-icon.svg"
           />
         </button>
       </Link>

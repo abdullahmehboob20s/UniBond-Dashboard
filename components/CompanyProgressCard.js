@@ -1,4 +1,5 @@
 import useMediaQuery from "hooks/useMediaQuery";
+import { IKImage } from "imagekitio-react";
 import React from "react";
 import { useSelector } from "react-redux";
 import styles from "scss/components/CompanyProgressCard.module.scss";
@@ -38,10 +39,12 @@ function CompanyProgressCard({
           {subtitle}
         </h1>
         {icon ? (
-          <img
-            src={icon}
+          <IKImage
+            path={icon}
             style={{ width: iconWidth }}
             className={styles.icon}
+            loading="lazy"
+            lqip={{ active: true }}
             alt=""
           />
         ) : null}

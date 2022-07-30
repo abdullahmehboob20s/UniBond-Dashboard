@@ -1,10 +1,17 @@
+import { IKImage } from "imagekitio-react";
 import React from "react";
 import styles from "scss/components/MetaMaskDetails.module.scss";
 
 function MetaMaskDetails() {
   return (
     <div className={styles.card}>
-      <img src="images/metamask.png" className={styles.banner} alt="" />
+      <IKImage
+        path="images/metamask.png"
+        className={styles.banner}
+        loading="lazy"
+        lqip={{ active: true }}
+        alt=""
+      />
       <div className={styles.body}>
         <p className={`black weight-6 ${styles.title}`}>
           What Is Metamask and How To Use It: A Beginner’s Guide

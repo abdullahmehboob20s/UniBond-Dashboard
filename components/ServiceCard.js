@@ -1,4 +1,5 @@
 import useMediaQuery from "hooks/useMediaQuery";
+import { IKImage } from "imagekitio-react";
 import React from "react";
 import { useSelector } from "react-redux";
 import styles from "scss/components/ServiceCard.module.scss";
@@ -15,7 +16,13 @@ function ServiceCard({ title, icon, iconClass = "two", fontSize = "fs-30px" }) {
 
   return (
     <div className={`${styles.card} ${isDark ? styles.dark : ""}`}>
-      <img src="images/triangleBlob.png" className={styles.blob} alt="" />
+      <IKImage
+        path="images/triangleBlob.png"
+        className={styles.blob}
+        loading="lazy"
+        lqip={{ active: true }}
+        alt=""
+      />
       <h1
         className={`${isBellow760px ? "fs-20px" : "fs-30px"} weight-8 black ${
           styles.title
@@ -30,7 +37,13 @@ function ServiceCard({ title, icon, iconClass = "two", fontSize = "fs-30px" }) {
         <SkillCard text="User Research" />
       </div>
 
-      <img src={icon} className={`${iconClass} ${styles.card_img}`} alt="" />
+      <IKImage
+        path={icon}
+        className={`${iconClass} ${styles.card_img}`}
+        loading="lazy"
+        lqip={{ active: true }}
+        alt=""
+      />
     </div>
   );
 }

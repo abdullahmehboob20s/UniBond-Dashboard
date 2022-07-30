@@ -9,6 +9,7 @@ import SidebarRight from "./SidebarRight";
 import { useDispatch } from "react-redux";
 import { toggleState as toggleBlackScreenState } from "reduxState/slices/blackScreenSlice";
 import Link from "next/link";
+import { IKImage } from "imagekitio-react";
 
 function Navbar({ pageName }) {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
@@ -31,7 +32,13 @@ function Navbar({ pageName }) {
   return (
     <div className={styles.navbar}>
       <Link href="/" passHref>
-        <img src="images/Eggg.png" className={`${styles.logo}`} alt="" />
+        <IKImage
+          path="images/Eggg.png"
+          className={`${styles.logo}`}
+          loading="lazy"
+          lqip={{ active: true }}
+          alt=""
+        />
       </Link>
 
       {isBellow1024px ? (
@@ -64,7 +71,7 @@ function Navbar({ pageName }) {
 
       {isBellow1024px ? (
         <IconButton
-          img="images/peoples/user.png"
+          img="peoples/user.png"
           className={styles.userIcon}
           notify={true}
           onClick={() => setIsRightSidebarOpen(true)}

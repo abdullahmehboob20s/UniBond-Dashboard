@@ -20,7 +20,7 @@ function SidebarRight(props) {
         <button className={styles.closeBtn} onClick={() => stateSetter(false)}>
           <IoClose />
         </button>
-        <IconButton img="images/peoples/user.png"></IconButton>
+        <IconButton img="peoples/user.png"></IconButton>
       </header>
 
       <main>
@@ -29,7 +29,7 @@ function SidebarRight(props) {
             <span className="fs-20px black weight-6">Messages</span>
             <IconButton
               wrapperClassName={styles.sidebarlinkIcon}
-              icon="images/icons/commentsIcon.svg"
+              icon="icons/commentsIcon.svg"
             />
           </a>
         </Link>
@@ -38,7 +38,7 @@ function SidebarRight(props) {
             <span className="fs-20px black weight-6">Notification</span>
             <IconButton
               wrapperClassName={styles.sidebarlinkIcon}
-              icon="images/icons/BellIcon.svg"
+              icon="icons/BellIcon.svg"
               notify={true}
             />
           </a>
