@@ -1,6 +1,38 @@
 @forward "globals";
 @use "./utils" as u;
 
+.progress-card-swiper-wrapper {
+  min-width: 100%;
+  position: relative;
+  background-color: transparent;
+
+  .progress-card-swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 11px 68px -3px rgba(0, 0, 0, 0.25);
+    background: transparent !important;
+
+    .swiper-wrapper {
+      width: 100%;
+
+      .swiper-slide {
+        background-color: transparent;
+        background: transparent;
+
+        & > div {
+          &::before {
+            // display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 @include u.breakpoint(xsmall) {
   .login-form {
     & .fs-16px {

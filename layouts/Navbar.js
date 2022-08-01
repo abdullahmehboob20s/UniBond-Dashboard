@@ -10,11 +10,16 @@ import { useDispatch } from "react-redux";
 import { toggleState as toggleBlackScreenState } from "reduxState/slices/blackScreenSlice";
 import Link from "next/link";
 import { IKImage } from "imagekitio-react";
+import OutsideClickDetector from "hooks/OutsideClickDetector";
 
 function Navbar({ pageName }) {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
   const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(false);
   const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
+  const [isPageNameDropdownShow, setIsPageNameDropdownShow] = useState(false);
+  const PagenameDropdownRef = OutsideClickDetector(() =>
+    setIsPageNameDropdownShow(false)
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -57,15 +62,28 @@ function Navbar({ pageName }) {
             <IoMdRefresh className={`${styles.refreshIcon} gray`} />
           </button>
         </div>
-        <div className={styles.pageName}>
-          <h2
-            className={`gray ${
-              isBellow1024px ? "fs-12px" : "fs-18px"
-            }  weight-6`}
+        <div className={styles.pageName} ref={PagenameDropdownRef}>
+          <button
+            className="pointer"
+            onClick={() => setIsPageNameDropdownShow((val) => !val)}
           >
-            {pageName}
-          </h2>
-          <IoCaretDownCircleSharp className={`${styles.downIcon} gray`} />
+            <h2
+              className={`gray ${
+                isBellow1024px ? "fs-12px" : "fs-18px"
+              }  weight-6`}
+            >
+              {pageName}
+            </h2>
+            <IoCaretDownCircleSharp className={`${styles.downIcon} gray`} />
+          </button>
+
+          <div
+            className={`${styles.pageNameDropdown} ${
+              isPageNameDropdownShow ? styles.show : ""
+            }`}
+          >
+            <p className="fs-18px">Some Text</p>
+          </div>
         </div>
       </div>
 

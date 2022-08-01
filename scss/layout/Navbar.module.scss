@@ -63,11 +63,42 @@
 }
 
 .pageName {
-  display: flex;
-  align-items: center;
+  position: relative;
+  z-index: 100 !important;
 
-  & > :not(:last-child) {
-    margin-right: u.rem(16);
+  & > button {
+    display: flex;
+    align-items: center;
+
+    & > :not(:last-child) {
+      margin-right: u.rem(16);
+    }
+  }
+
+  .pageNameDropdown {
+    position: absolute;
+    top: 160%;
+    left: 0;
+    padding: 1vw;
+    background-color: var(--color-yellow);
+    width: 100%;
+    border-radius: var(--r10px);
+    box-shadow: 0rem 0rem 1.2vw rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    transform: translateY(0.6rem);
+    pointer-events: none;
+    opacity: 0;
+    color: var(--text-changeable-white);
+
+    &.show {
+      opacity: 1;
+      transform: translateY(0rem);
+      pointer-events: visible;
+    }
+
+    @include u.breakpoint(large) {
+      display: none;
+    }
   }
 }
 

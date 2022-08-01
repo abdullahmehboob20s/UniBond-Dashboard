@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
+    "@splidejs/react-splide": "^0.7.8",
+    "@splidejs/splide": "^4.0.7",
     "imagekitio-react": "^1.1.1",
     "next": "12.2.3",
     "react": "18.2.0",
@@ -17,7 +19,8 @@
     "react-icons": "^4.4.0",
     "react-redux": "^8.0.2",
     "react-twitter-embed": "^4.0.4",
-    "sass": "^1.54.0"
+    "sass": "^1.54.0",
+    "swiper": "^8.3.2"
   },
   "devDependencies": {
     "eslint": "8.20.0",
