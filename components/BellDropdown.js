@@ -6,7 +6,7 @@ const NotificationCard = ({ title, notify }) => {
     <div
       className={`${styles.notificationCard} ${notify ? styles.notify : ""}`}
     >
-      <p className={`${styles.notificationTitle} white`}>{title}</p>
+      <p className={`${styles.notificationTitle} fs-14px white`}>{title}</p>
     </div>
   );
 };

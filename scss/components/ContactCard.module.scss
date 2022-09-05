@@ -6,12 +6,12 @@
 
   .icon {
     display: flex;
-    width: 4vw;
+    width: u.rem(50);
     color: var(--color-black);
 
     svg {
-      width: 1.9vw;
-      height: 1.9vw;
+      width: u.rem(24);
+      height: u.rem(24);
     }
   }
 }

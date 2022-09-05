@@ -1,15 +1,16 @@
 @use "../globals/colors" as colors;
+@use "../utils" as *;
 
 .dropdown {
   position: absolute;
   top: 120%;
   right: 0;
-  width: 20vw;
+  width: rem(280);
   background: #000000;
-  box-shadow: 0px 0.2777777777777778vw 2.7777777777777777vw rgba(0, 0, 0, 0.35);
-  border-radius: 0.6944444444444444vw;
-  padding: 1vw 2.2vw;
-  padding-bottom: 2vw;
+  box-shadow: 0px rem(20) rem(20) rgba(0, 0, 0, 0.35);
+  border-radius: rem(8);
+  padding: rem(14) rem(36);
+  padding-bottom: rem(30);
   z-index: 50;
 
   transform: translateY(10%);
@@ -27,23 +28,16 @@
 .userCard {
   display: flex;
   align-items: center;
-  padding: 0.8vw 0;
-  border-bottom: 0.2vw solid colors.$yellow;
+  padding: rem(14) 0;
+  border-bottom: rem(2) solid colors.$yellow;
   position: relative;
 
   & > :not(:last-child) {
-    margin-right: 1.2vw;
-  }
-
-  .usercardTitle {
-    font-size: 1vw;
-    color: white;
-    margin-right: 2vw;
+    margin-right: rem(16);
   }
 }
 
 .commentNumber {
-  font-size: 1.1vw;
   position: absolute;
   top: 50%;
   right: 0;

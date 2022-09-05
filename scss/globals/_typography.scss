@@ -221,12 +221,24 @@ a {
 
 // MEDIA QUIERS ==============
 
+@include u.breakpoint(twoxLarge) {
+  :root {
+    --fs-8px: #{u.rem(8)};
+    --fs-12px: #{u.rem(12)};
+    --fs-14px: #{u.rem(14)};
+    --fs-18px: #{u.rem(16)};
+    --fs-20px: #{u.rem(16)};
+    --fs-22px: #{u.rem(18)};
+    --fs-24px: #{u.rem(20)};
+    --fs-30px: #{u.rem(22)};
+    --fs-46px: #{u.rem(36)};
+  }
+}
+
 @include u.breakpoint(large) {
   :root {
     --fs-40px: #{u.rem(34)};
-  }
 
-  [data-units="vw"] {
     --fs-18px: #{u.rem(14)};
     --fs-8px: #{u.rem(8)};
     --fs-12px: #{u.rem(10)};
@@ -240,7 +252,7 @@ a {
 }
 
 @include u.breakpoint(small) {
-  [data-units="vw"] {
+  :root {
     --fs-22px: #{u.rem(16)};
     --fs-24px: #{u.rem(16)};
     --fs-46px: #{u.rem(28)};
@@ -248,7 +260,7 @@ a {
 }
 
 @media (max-width: 400px) {
-  [data-units="vw"] {
+  :root {
     --fs-14px: #{u.rem(10)};
     --fs-30px: #{u.rem(16)};
     --fs-46px: #{u.rem(24)};
