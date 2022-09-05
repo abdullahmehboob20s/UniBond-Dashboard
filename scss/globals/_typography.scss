@@ -224,7 +224,9 @@ a {
 @include u.breakpoint(large) {
   :root {
     --fs-40px: #{u.rem(34)};
-    --fs-30px: #{u.rem(20)};
+  }
+
+  [data-units="vw"] {
     --fs-18px: #{u.rem(14)};
     --fs-8px: #{u.rem(8)};
     --fs-12px: #{u.rem(10)};
@@ -232,18 +234,13 @@ a {
     --fs-20px: #{u.rem(16)};
     --fs-22px: #{u.rem(18)};
     --fs-24px: #{u.rem(18)};
+    --fs-30px: #{u.rem(20)};
     --fs-46px: #{u.rem(32)};
   }
 }
 
 @include u.breakpoint(small) {
-  :root {
-    --fs-30px: #{u.rem(20)};
-    --fs-18px: #{u.rem(14)};
-    --fs-8px: #{u.rem(8)};
-    --fs-12px: #{u.rem(10)};
-    --fs-14px: #{u.rem(12)};
-    --fs-20px: #{u.rem(16)};
+  [data-units="vw"] {
     --fs-22px: #{u.rem(16)};
     --fs-24px: #{u.rem(16)};
     --fs-46px: #{u.rem(28)};
@@ -251,15 +248,9 @@ a {
 }
 
 @media (max-width: 400px) {
-  :root {
-    --fs-30px: #{u.rem(16)};
-    --fs-18px: #{u.rem(14)};
-    --fs-8px: #{u.rem(8)};
-    --fs-12px: #{u.rem(10)};
+  [data-units="vw"] {
     --fs-14px: #{u.rem(10)};
-    --fs-20px: #{u.rem(16)};
-    --fs-22px: #{u.rem(16)};
-    --fs-24px: #{u.rem(16)};
+    --fs-30px: #{u.rem(16)};
     --fs-46px: #{u.rem(24)};
   }
 }
