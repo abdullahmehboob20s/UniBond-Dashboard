@@ -3,7 +3,7 @@ import Services from "layouts/Services";
 
 export default function ServicesPage() {
   return (
-    <div>
+    <div data-units="vw">
       <DashboardLayout pageName="Services">
         <Services />
       </DashboardLayout>

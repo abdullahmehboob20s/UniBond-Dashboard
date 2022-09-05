@@ -1,5 +1,6 @@
 @forward "globals";
 @use "./utils" as u;
+@forward "./utils/mixins";
 
 .progress-card-swiper-wrapper {
   min-width: 100%;
@@ -22,12 +23,6 @@
       .swiper-slide {
         background-color: transparent;
         background: transparent;
-
-        & > div {
-          &::before {
-            // display: none;
-          }
-        }
       }
     }
   }

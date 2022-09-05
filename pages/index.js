@@ -3,7 +3,7 @@ import Dashboard from "layouts/Dashboard";
 
 export default function Home() {
   return (
-    <div>
+    <div data-units="vw">
       <DashboardLayout pageName="Dashboard">
         <Dashboard />
       </DashboardLayout>
