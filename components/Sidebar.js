@@ -3,8 +3,11 @@ import styles from "scss/components/Sidebar.module.scss";
 import SidebarHeader from "./SidebarHeader";
 import { AiOutlineSearch } from "react-icons/ai";
 import UserCard from "./UserCard";
-import MetaMaskDetails from "./MetaMaskDetails";
-import { IKImage } from "imagekitio-react";
+import dynamic from "next/dynamic";
+
+const DynamicMetaMask = dynamic(() => import("./MetaMaskDetails"), {
+  ssr: false,
+});
 
 function Sidebar() {
   return (
@@ -106,7 +109,7 @@ function Sidebar() {
       </div>
 
       <div className={styles.container}>
-        <MetaMaskDetails />
+        <DynamicMetaMask />
       </div>
 
       <button className={styles.commentIcon}>

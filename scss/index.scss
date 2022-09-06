@@ -28,6 +28,26 @@
   }
 }
 
+.custom-scrollbar {
+  position: relative;
+  height: auto;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0.6vw !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 27px !important;
+    background-color: var(--color-users-scrollbar-bg) !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 27px !important;
+    background-color: var(--color-gray) !important;
+  }
+}
+
 @include u.breakpoint(xsmall) {
   .login-form {
     & .fs-16px {

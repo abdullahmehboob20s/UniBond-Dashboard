@@ -92,7 +92,7 @@
   --user-cards-dissolver: linear-gradient(
     180deg,
     rgba(246, 245, 249, 0) 0%,
-    #f6f5f9 48.23%
+    #f4bb00 48.23%
   );
 }
 
@@ -105,11 +105,11 @@
   --color-gray: #a5a5a5;
   --color-sidebar: rgb(26, 26, 26);
   --color-light-gray: rgba(255, 255, 255, 0.9);
-  --user-cards-dissolver: linear-gradient(
-    180deg,
-    rgba(246, 245, 249, 0) 0%,
-    rgb(26, 26, 26) 48.23%
-  );
+  // --user-cards-dissolver: linear-gradient(
+  //   180deg,
+  //   rgba(246, 245, 249, 0) 0%,
+  //   rgb(26, 26, 26) 48.23%
+  // );
 }
 
 @include u.breakpoint(large) {

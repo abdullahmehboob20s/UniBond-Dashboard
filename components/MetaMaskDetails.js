@@ -1,24 +1,59 @@
 import { IKImage } from "imagekitio-react";
-import React from "react";
+import React, { useState } from "react";
 import styles from "scss/components/MetaMaskDetails.module.scss";
+import axios from "axios";
+import { useEffect } from "react";
 
 function MetaMaskDetails() {
+  let [post, setPost] = useState(null);
+
+  const fetching = async () => {
+    try {
+      let res = await axios.get(
+        `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@BlockAuditReport`
+      );
+
+      let post = res.data.items.find((item) =>
+        item.title === "Escrow Service" ? item : null
+      );
+
+      setPost(post);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetching();
+  }, []);
+
+  let toText = (node) => {
+    let tag = document?.createElement("div");
+    tag.innerHTML = node;
+    node = tag.innerText;
+    return node;
+  };
+
   return (
     <div className={styles.card}>
-      <IKImage
+      <img src={post?.thumbnail} className={styles.banner} alt="" />
+      {/* <IKImage
         path="images/metamask.png"
         className={styles.banner}
         loading="lazy"
         lqip={{ active: true }}
         alt=""
-      />
+      /> */}
       <div className={styles.body}>
-        <p className={`black weight-6 ${styles.title}`}>
-          What Is Metamask and How To Use It: A Beginner’s Guide
-        </p>
+        <p className={`black weight-6 ${styles.title}`}>{post?.title}</p>
         <p className={`${styles.subtitle} weight-6 gray`}>
-          MetaMask is among the most well-known and in style crypto wallets —{" "}
-          <a href="#" className="blue">
+          {toText(post?.content).substring(0, 100).concat("...")}{" "}
+          <a
+            href={post?.link}
+            rel="noreferrer"
+            target="_blank"
+            className="blue"
+          >
             Read More
           </a>
         </p>

@@ -9,6 +9,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow, Autoplay } from "swiper";
+import { Sandpack } from "@codesandbox/sandpack-react";
+import CodeEditor from "components/CodeEditor";
+import Code_Editor from "components/CodeEditor";
 
 function Dashboard() {
   const isBellow640px = useMediaQuery("(max-width : 40em)");
@@ -150,13 +153,24 @@ function Dashboard() {
         <h1 className={`fs-22px weight-7 black ${styles.onGoingTitle}`}>
           Ongoing Project open code.
         </h1>
-        <div className={styles.projectCode}>
+        {/* <div className={styles.projectCode}>
           <IKImage
             path="images/code.png"
             loading="lazy"
             lqip={{ active: true }}
             alt=""
           />
+        </div> */}
+        {/* <Sandpack
+          template="react"
+          theme="dark"
+          options={{
+            autorun: false,
+          }}
+        /> */}
+
+        <div className={styles.projectCode}>
+          <Code_Editor />
         </div>
       </div>
 
