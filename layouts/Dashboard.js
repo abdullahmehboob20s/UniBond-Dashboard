@@ -47,25 +47,27 @@ function Dashboard() {
         className={styles.card4}
       />
       <div className={styles.tweets}>
-        {/* <IKImage
-        
-        loading="lazy"
-        lqip={{ active: true }}
-        path="images/tweets.png" alt="" /> */}
-        <header>
+        <IKImage
+          loading="lazy"
+          lqip={{ active: true }}
+          path="images/tweets.png"
+          alt=""
+          className={styles.tweetsBanner}
+        />
+        {/* <header>
           <span className={styles.icon}>
             <FaTwitter color="white" />
           </span>
           <p className={styles.tweetsTitle}>@uni.bond</p>
-        </header>
-        <main>
+        </header> */}
+        {/* <main>
           <TwitterTimelineEmbed
             sourceType="timeline"
             screenName="uniBondLab"
             options={{ height: "100%" }}
             noHeader={true}
           />
-        </main>
+        </main> */}
       </div>
       <div className={styles.cards}>
         <CompanyProgressCard
