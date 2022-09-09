@@ -42,7 +42,7 @@ function CompanyProgressCard({
         {icon ? (
           <IKImage
             path={icon}
-            style={{ width: iconWidth }}
+            style={{ "--width": iconWidth }}
             className={styles.icon}
             loading="lazy"
             lqip={{ active: true }}

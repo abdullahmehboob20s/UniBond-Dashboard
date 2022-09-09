@@ -32,7 +32,13 @@ function Code_Editor() {
     <SandpackProvider
       template="react"
       theme="dark"
-      style={{ height: "16vw" }}
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+      }}
       files={{
         "/App.js": code,
       }}

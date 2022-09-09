@@ -9,7 +9,9 @@ function Dashboardlayout({ children, showSidebar = true, pageName }) {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
 
   return (
-    <div className={`${styles.dashboard} ${showSidebar ? styles.sidebar : ""}`}>
+    <div
+      className={`${styles.dashboard} ${showSidebar ? styles.showSidebar : ""}`}
+    >
       <div className={styles.left}>
         <header>
           <Navbar pageName={pageName} />

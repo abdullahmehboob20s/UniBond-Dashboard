@@ -28,13 +28,6 @@ function Dashboard() {
         className={styles.card1}
       />
 
-      {/* <CompanyProgressCard
-        title="Total Audit Ongoing"
-        subtitle="05"
-        inWeek="8"
-        iconWidth="36%"
-        icon="icons/total-audit-icon.png"
-      /> */}
       <AnimatedWrappingCards />
 
       <CompanyProgressCard

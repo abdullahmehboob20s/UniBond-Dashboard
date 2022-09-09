@@ -27,10 +27,14 @@ export default function AnimatedWrappingCards() {
     initial: {
       height: "100%",
       zIndex: 4,
+      rotateX: 0,
+      // skewY: 0,
     },
     hover: {
       height: ["100%", "90%"],
-      y: [0, -120, 0],
+      y: [0, -100, 0],
+      // skewY: [0, 20, 0],
+      rotateX: [0, 80, 0],
       zIndex: 10,
       transition: {
         zIndex: {
