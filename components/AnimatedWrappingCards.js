@@ -68,7 +68,7 @@ export default function AnimatedWrappingCards() {
 
   return (
     <div className={styles.AnimatedWrappingCards}>
-      <div className={styles.mainBox}>
+      {/* <div className={styles.mainBox}>
         <motion.div
           variants={checkState()}
           initial="initial"
@@ -100,7 +100,17 @@ export default function AnimatedWrappingCards() {
             isYellowCard={true}
           />
         </motion.div>
-      </div>
+      </div> */}
+
+      <CompanyProgressCard
+        title="Total Audit Ongoing"
+        subtitle="05"
+        inWeek="8"
+        iconWidth="36%"
+        icon="icons/total-audit-icon.png"
+        style={{ height: "100%" }}
+        isYellowCard={true}
+      />
     </div>
   );
 }
