@@ -1,18 +1,35 @@
 @use "../utils/" as u;
 @use "../globals/colors" as colors;
 
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  pointer-events: none;
+  z-index: 400;
+  width: 100%;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: flex-end;
+  overflow-x: hidden;
+  // background-color: red;
+
+  &.wrapperShowing {
+    pointer-events: visible;
+    overflow-y: auto;
+  }
+}
+
 .sidebar {
   $padding-y: u.rem(42);
   $padding-x: u.rem(40);
 
-  position: fixed;
-  top: 0;
-  right: 0;
+  height: fit-content;
+  min-height: 100%;
+
   width: u.rem(300);
-  height: 100vh;
   background-color: var(--right-sidebar-bg);
-  z-index: 400;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;

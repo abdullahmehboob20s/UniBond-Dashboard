@@ -33,6 +33,21 @@ html {
   }
 }
 
+.custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.4rem !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-users-scrollbar-bg) !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 27px !important;
+    background-color: var(--color-gray) !important;
+  }
+}
+
 .font-secondary {
   font-family: u.$font-secondary;
 }
