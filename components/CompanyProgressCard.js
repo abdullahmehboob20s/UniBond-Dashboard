@@ -16,6 +16,7 @@ function CompanyProgressCard({
   className,
   flipCard = false,
   isYellowCard = false,
+  style,
 }) {
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
   const { isDark } = useSelector((state) => state.themeState);
@@ -25,7 +26,7 @@ function CompanyProgressCard({
       className={`${styles.card}  ${
         textCenter ? styles.textCenter : ""
       } ${className} ${isYellowCard ? styles.yellowCard : ""}`}
-      style={{ backgroundColor: bg }}
+      style={{ backgroundColor: bg, ...style }}
     >
       <h2
         className={`${
